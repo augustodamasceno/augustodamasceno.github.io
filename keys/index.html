@@ -45,32 +45,6 @@
 
   <!-- Custom css -->
   <link href="../css/custom.css" rel="stylesheet">
-
-
-  <script>
-    // HTTP GET and write response inside the element with id "the-ip"..
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var ipNow = JSON.parse(this.responseText);
-            document.getElementById("the-ip").innerHTML = "<h2>" + ipNow.origin + "</h2>";
-            console.log("IP: " + ipNow.origin);
-        }
-    };
-
-    // GET from HTTPBIN.
-    xmlhttp.open("GET", "https://httpbin.org/ip", true);
-    xmlhttp.send();
-    </script>
-
-    <!-- Discord button to copy the user to clipboard -->
-    <script>
-      function discord2Clipboard() {
-        var data = new DataTransfer();
-        data.items.add("augustodamasceno#2263", "text/plain");
-        navigator.clipboard.write(data);
-      }
-    </script>
 </head>
 
 <!-- body classes:  -->
@@ -220,18 +194,54 @@
 
     <div id="page-start"></div>
 
-      <br><br><br><br><br>
-      <section class="section clearfix text-center">
-      <p class="text-center text-muted"><h1 class="mt-10">Your IP from <a href="https://httpbin.org">httpbin.org</a> by Kenneth Reitz</h1></p>
-      <div class="separator-2"></div>
-      <div id="the-ip"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <section class="main-container">
+        <div class="container">
+          <div class="row">
+            <h1 class="page-title">PGP Keys</h1>
+            <div class="separator-2"></div>
+            <section class="light-gray-bg pv-20">
+              <p class="text-center text-muted"><h2 class="mt-10">This key can be used to send me encrypted files, emails and verify my signature in docs and other files.</h2></p>
+              <p class="text-left ">
+                pub&nbsp;&nbsp;&nbsp;&nbsp;ed25519 2022-01-10 [SC] [expires: 2022-12-31]
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                994A 1322 A449 35D0 34E3  338E 0AE8 6A03 AE15 2B11
+                <br>
+                uid
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Augusto Damasceno &lt;augustodamasceno@protonmail.com &gt;
+                <br>
+                sub&nbsp;&nbsp;&nbsp;&nbsp;cv25519 2022-01-10 [E] [expires: 2022-12-31]          
+              </p>
+              <a href="../pgp/AugustoDamasceno-pgpkey.txt" class="btn btn-animated btn-default-transparent btn-sm">Download <i class="fa fa-download"></i></a> 
+            </section>
+          </div>
+        </div>
       </section>
+    <!-- section start -->
+    <!-- ================ -->
+    <section class="bg-light">
 
+      <div class="container">
+        <div class="row">
+
+          <br><br><br><br><br>
+
+        </div>
+      </div>
+    </section>
+    <!-- section end -->
 
     <!-- section start -->
     <!-- ================ -->
-    <section class="light-gray-bg pv-20">
-    </section>
+   
     <!-- section end -->
 
     <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
@@ -304,4 +314,4 @@
   <script src="../js/meursault.js"></script>
 </body>
 
-</html>    
+</html>

@@ -209,8 +209,8 @@
               <div class="container">
                 <div class="hc-slideshow-caption hc-slideshow-caption--large p-3 text-center w-100">
                   <h1 class="text-white text-capitalize animated fadeInDown hc-animation-delay-3000">About</h1>
-                  <p class="animated fadeInUp hc-animation-delay-1250">Hi! Oi! Привет! I am Augusto Damasceno, IT private teacher, martial artist (Choy Lay Fut, Sanda and Jiu-jitsu) and amateur photographer.
-                    This website is a compilation of my educational material, courseware, references e other stuff.</p>
+                  <h2  class="text-white"><p class="animated fadeInUp hc-animation-delay-1250">Hi! Oi! Привет! I am Augusto Damasceno, IT private teacher, martial artist and amateur photographer.
+                  <br>This website is a compilation of my educational material, courseware, references e other stuff.</p></h2>
                 </div>
               </div>
             </div>
@@ -222,7 +222,7 @@
               <div class="container">
                 <div class="hc-slideshow-caption hc-slideshow-caption--large p-3 text-center w-100">
                   <h1 class="text-white text-capitalize animated fadeInDown hc-animation-delay-3000">Classes</h1>
-                  <p class="animated fadeInUp hc-animation-delay-1250">Online classes via Skype or Discord, made just for you.</p>
+                  <h2  class="text-white"><p class="animated fadeInUp hc-animation-delay-1250">Online classes via Google Meet or Discord, made just for you.</p></h2>
                 </div>
               </div>
             </div>
@@ -281,7 +281,7 @@
               </div>
               <div class="col-lg-4 col-md-6">
                 <div class="ph-20 hc-item-box text-center hc-element-invisible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
-                  <span class="icon large dark-bg circle"><i class="fa fa-key"></i></span>
+                  <a href="https://augustodamasceno.org/keys">  <span class="icon large dark-bg circle"><i class="fa fa-key"></i></span></a>
                   <h3>Keys</h3>
                   <div class="separator clearfix"></div>
                   <p class="text-muted">My PGP keys.</p>
@@ -297,10 +297,10 @@
               </div>
               <div class="col-lg-4 col-md-6">
                 <div class="ph-20 hc-item-box text-center hc-element-invisible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
-                  <span class="icon large dark-bg circle"><i class="fa fa-file-text-o"></i></span>
-                  <h3>Web Articles</h3>
+                  <a href="https://augustodamasceno.org/time"><span class="icon large dark-bg circle"><i class="fa fa-clock-o"></i></span></a>
+                  <h3>Time</h3>
                   <div class="separator clearfix"></div>
-                  <p class="text-muted">Technology, Artificial Intelligence, Martial Arts, Photography, Psychology, Health and Philosophy.</p>
+                  <p class="text-muted">World Clock</p>
                 </div>
               </div>
             </div>
@@ -326,29 +326,35 @@
             <p>Feel free to donate if I helped you with my educational material.</p><br>
             <ul class="list-inline">
               <li class="list-inline-item" data-animation-effect="fadeInUpSmall" data-effect-delay="100"><i class="fa fa-check-square-o"></i>Via Pix (Brazil)
-                <br>Phone or E-mail
-                <a><img src="img/pix.png" width="160" height="160"></a>
+                <br>pix@augustodamasceno.org
+                <span role="button" tabindex="0" onclick="copy2Clip(2)">
+                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Click to copy my Pix key!">
+                    <img id='discord-img' src="img/pix.jpeg" width="160" height="160">
+                  </a>
+                </span>
+                <input id="clipboard2" type="hidden" value="augustodamasceno@protonmail.com"></input>
               </li>
-              <span style="display:inline-block; width: 12%;"></span>
+              <span style="display:inline-block; width: 25%;"></span>
               <li class="list-inline-item" style="vertical-align:top" data-animation-effect="fadeInUpSmall" data-effect-delay="100"><i class="fa fa-check-square-o"></i>Via PayPal
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <input type="hidden" name="cmd" value="_s-xclick" />
-                  <input type="hidden" name="hosted_button_id" value="PQH87JYZWZDR4" />
-                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                  <input type="hidden" name="hosted_button_id" value="2QW8UNZB4743A" />
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                   <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
-                </form>
+                  </form>                  
               </li>
               <br><br>
               <li class="list-inline-item" data-animation-effect="fadeInUpSmall" data-effect-delay="100"><i class="fa fa-check-square-o"></i>Via Bitcoin
                 <br>32ZvJaCoiP617qP8UF5fcj2XRrY9Kkk4Li
                 <a><img src="img/Bitcoin-QR.jpeg" width="175" height="175"></a>
               </li>
+              <span style="display:inline-block; width: 18%;"></span>
               <li class="list-inline-item" data-animation-effect="fadeInUpSmall" data-effect-delay="100"><i class="fa fa-check-square-o"></i>Via Ethereum
                 <br>0x8200FdCe1b9b324d781aBe44fF9eC87fd82C5aBf
                 <a><img src="img/Ethereum-QR.jpeg" width="190" height="190"></a>
               </li>
             </ul>
-            <p><strong>Thanks!</strong></p>
+            <br>
+            <h3><p><strong>Thanks!</strong></p></h3>
           </div>
         </div>
         <br>
@@ -395,7 +401,7 @@
                     <li class="list-inline-item"><i class="fa fa-phone pr-1 pl-2"></i> +55 84 98638 8232</li>
                     <li class="list-inline-item"><i class="fa fa-envelope-o pr-1 pl-2"></i> augustodamasceno@protonmail.com</li>
                   </ul>
-                  <p class="text-center text-muted">Copyright © 2020,2021. All Rights Reserved</p>
+                  <p class="text-center text-muted">Copyright © 2020-2022. All Rights Reserved</p>
                 </div>
               </div>
             </div>
