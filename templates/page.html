@@ -48,22 +48,6 @@
 
   <!-- Augusto Damasceno's CSS -->
   <link href="../css/augustodamasceno.css" rel="stylesheet">
-
-  <script>
-    // HTTP GET and write response inside the element with id "the-ip"..
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var ipNow = JSON.parse(this.responseText);
-            document.getElementById("the-ip").innerHTML = "<h2>" + ipNow.origin + "</h2>";
-            console.log("IP: " + ipNow.origin);
-        }
-    };
-
-    // GET from HTTPBIN.
-    xmlhttp.open("GET", "https://httpbin.org/ip", true);
-    xmlhttp.send();
-  </script>
 </head>
 
 <!-- body classes:  -->
@@ -191,13 +175,9 @@
       <br>
       <br>
       <section class="section clearfix text-center">
-        <div id="page-start"></div>
-        <section class="section clearfix text-center">
-        <p class="text-center text-muted"><h1 class="mt-10">Your IP from <a href="https://httpbin.org">httpbin.org</a> by Kenneth Reitz</h1></p>
-        <div class="separator-2"></div>
-        <div id="the-ip"></div>
-        </section>
+        <p class="text-center text-muted"><h1 class="mt-10">Page</h1></p>
       </section>
+      
     </section>
     <!-- section end -->
 

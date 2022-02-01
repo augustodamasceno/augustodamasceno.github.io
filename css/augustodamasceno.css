@@ -8,10 +8,20 @@
 
  @charset "UTF-8";
 
+/* Desktop and Mobile */
+.ad-center {
+  position: relative;
+  text-align: center;
+}
+
 /* Desktop */
 .spanspace-20{
     display:inline-block;
     width: 20%;
+}
+.spanspace-15{
+  display:inline-block;
+  width: 15%;
 }
 
 /* Mobile */
