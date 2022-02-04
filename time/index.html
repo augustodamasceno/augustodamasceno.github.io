@@ -22,8 +22,8 @@
   <!-- Bootstrap core CSS -->
   <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
 
-  <!-- Font Awesome CSS -->
-  <link href="../fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
 
   <!-- Plugins -->
   <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -45,6 +45,9 @@
 
   <!-- Custom css -->
   <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
 </head>
 
 <!-- body classes:  -->
@@ -58,7 +61,7 @@
 
   <!-- scrollToTop -->
   <!-- ================ -->
-  <div class="scrollToTop circle"><i class="fa fa-angle-up"></i></div>
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
 
   <!-- page wrapper start -->
   <!-- ================ -->
@@ -91,8 +94,8 @@
                       </a>
                     </span>
                   </li>
-                  <li class="list-inline-item"><i class="fa fa-phone pr-1 pl-2"></i> +55 84 98638 8232</li>
-                  <li class="list-inline-item"><i class="fa fa-envelope-o pr-1 pl-2"></i> augustodamasceno@protonmail.com</li>
+                  <li class="list-inline-item"><i class="fas fa-phone pr-1 pl-2"></i> +55 84 98638 8232</li>
+                  <li class="list-inline-item"><i class="fas fa-envelope pr-1 pl-2"></i> augustodamasceno@protonmail.com</li>
                 </ul>
               </div>
               <!-- header-top-first end -->
@@ -102,10 +105,6 @@
               <!-- header-top-second start -->
               <!-- ================ -->
               <div id="header-top-second" class="clearfix">
-
-                <div class="btn-group pull-right">
-                  <a href="https://github.com/augustodamasceno?tab=repositories" class="btn btn-default btn-sm" target="_blank"><i class="fa fa-github"></i> GitHub</a>
-                </div>
 
               </div>
               <!-- header-top-second end -->
@@ -126,60 +125,37 @@
       <header class="header dark fixed fixed-desktop clearfix">
         <div class="container">
           <div class="row">
-            <div class="col-md-auto hidden-md-down">
+            <div class="col-md-auto hidden-md-down">  
               <!-- header-first start -->
               <!-- ================ -->
               <div class="header-first clearfix">
 
                 <!-- logo -->
-                <div id="logo" class="logo">
-                  <a href="../index.html"><img id="logo_img" src="../img/nome-small.png" alt="Augusto Damasceno"></a>
-                </div>
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>    
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>Artificial Intelligence</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-laptop pr-2"></i>Programming</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-tree pr-2"></i>Data Structures</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>Embedded Systems</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fab fa-linux pr-2"></i>Linux</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>Trading</li>
+                </ul>
               </div>
               <!-- header-first end -->
 
             </div>
             <div class="col-lg-8 ml-auto">
-
-              <!-- header-second start -->
-              <!-- ================ -->
-              <div class="header-second clearfix">
-
-                <!-- main-navigation start -->
-                <!-- classes: -->
-                <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
-                <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
-                <!-- ================ -->
-                <div class="main-navigation main-navigation--mega-menu main-navigation--style-2  animated">
-                  <nav class="navbar navbar-expand-lg navbar-light p-0">
-
-                    <!-- header-first end -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                      <!-- main-menu -->
-                      <ul class="navbar-nav ml-xl-auto">
-                        <li class="nav-item dropdown">
-                          <a href="../index.html" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Areas</a>
-                          <ul class="dropdown-menu" aria-labelledby="first-dropdown">
-                            <ul class="menu list-unstyled">
-                              <li><a href="#footer"><i class="fa fa-heart pr-2"></i>Artificial Intelligence</a></li>
-                              <li><a href="#footer"><i class="fa fa-laptop pr-2"></i>Programming</a></li>
-                              <li><a href="#footer"><i class="fa fa-tree pr-2"></i>Data Structures</a></li>
-                              <li><a href="#footer"><i class="fa fa-microchip pr-2"></i>Embedded Systems</a></li>
-                              <li><a href="#footer"><i class="fa fa-linux pr-2"></i>Linux</a></li>
-                              <li><a href="#footer"><i class="fa fa-line-chart pr-2"></i>Trading</a></li>
-                            </ul>
-                          </ul>
-                        </li>
-                    </div>
-                  </nav>
-                </div>
-                <!-- main-navigation end -->
-              </div>
-              <!-- header-second end -->
 
             </div>
             <div class="col-auto hidden-md-down">
@@ -189,8 +165,6 @@
       </header>
       <!-- header end -->
     </div>
-    <!-- header-container end -->
-
 
     <div id="page-start"></div>
 
@@ -200,7 +174,7 @@
       <br>
       <br>
       <section class="section clearfix text-center">
-      <p class="text-center text-muted"><h1 class="mt-10">Time
+      <p class="text-center text-muted"><h1 class="mt-10">Time - World Clock
 
       </h1></p>
       <div class="separator-2"></div>
@@ -233,25 +207,6 @@
       </div>
       </section>
 
-    <!-- section start -->
-    <!-- ================ -->
-    <section class="bg-light">
-
-      <div class="container">
-        <div class="row">
-
-          <br><br><br><br><br>
-
-        </div>
-      </div>
-    </section>
-    <!-- section end -->
-
-    <!-- section start -->
-    <!-- ================ -->
-    <section class="light-gray-bg pv-20">
-    </section>
-    <!-- section end -->
 
     <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
     <!-- ================ -->
@@ -281,8 +236,8 @@
                       </span>
                     </li>
                     <input id="clipboard1" type="hidden" value="augustodamasceno#2263"></input>
-                    <li class="list-inline-item"><i class="fa fa-phone pr-1 pl-2"></i> +55 84 98638 8232</li>
-                    <li class="list-inline-item"><i class="fa fa-envelope-o pr-1 pl-2"></i> augustodamasceno@protonmail.com</li>
+                    <li class="list-inline-item"><i class="fas fa-phone pr-1 pl-2"></i> +55 84 98638 8232</li>
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
                   </ul>
                   <p class="text-center text-muted">Copyright © 2020-2022. All Rights Reserved</p>
                 </div>
