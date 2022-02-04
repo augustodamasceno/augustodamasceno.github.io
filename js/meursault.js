@@ -1,8 +1,8 @@
 /*
- * Meursault JavaScript Library v1.0
+ * Meursault JavaScript Library v1.1
  * https://github.com/augustodamasceno/meursault
  *
- * Copyright (c) 2020, Augusto Damasceno.
+ * Copyright (c) 2020-2022, Augusto Damasceno.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -49,4 +49,30 @@ async function copy2Clip(clipNum) {
   }
 
   return success;
+}
+
+/**
+ * getPpi - Calculates photography print quality in pixels per inch (PPI).
+ * 
+ * The form must have text fields with IDs:
+ *  fileWidth, fileHeight, photoHeight and ppi.
+ *
+ * @param  {*} form Form
+ */
+async function getPpi (form) {
+  var resultW = parseFloat(form.fileWidth.value) / 
+    (parseFloat(form.photoWidth.value)*0.3937008);
+  var resultH = parseFloat(form.fileHeight.value) / 
+    (parseFloat(form.photoHeight.value)*0.3937008);
+  var result = 0.0;
+  if (resultH < resultW)
+  {
+    result = resultH;
+  }
+  else
+  {
+    result = resultW;
+  }
+  
+  document.getElementById("ppi").value = "" + Math.floor(result);
 }

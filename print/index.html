@@ -48,6 +48,22 @@
 
   <!-- Augusto Damasceno's CSS -->
   <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <script>
+    // HTTP GET and write response inside the element with id "the-ip"..
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var ipNow = JSON.parse(this.responseText);
+            document.getElementById("the-ip").innerHTML = "<h2>" + ipNow.origin + "</h2>";
+            console.log("IP: " + ipNow.origin);
+        }
+    };
+
+    // GET from HTTPBIN.
+    xmlhttp.open("GET", "https://httpbin.org/ip", true);
+    xmlhttp.send();
+  </script>
 </head>
 
 <!-- body classes:  -->
@@ -139,17 +155,17 @@
                   </li>
                   <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fas fa-heart pr-2"></i>Artificial Intelligence</li>
+                    <i class="fas fa-heart pr-2"></i>Artificial Intelligence</a></li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fas fa-laptop pr-2"></i>Programming</li>
+                    <i class="fas fa-laptop pr-2"></i>Programming</a></li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fas fa-tree pr-2"></i>Data Structures</li>
+                    <i class="fas fa-tree pr-2"></i>Data Structures</a></li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fas fa-microchip pr-2"></i>Embedded Systems</li>
+                    <i class="fas fa-microchip pr-2"></i>Embedded Systems</a></li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fab fa-linux pr-2"></i>Linux</li>
+                    <i class="fab fa-linux pr-2"></i>Linux</a></li>
                   <li class="list-inline-item" style="vertical-align:bottom">
-                    <i class="fas fa-chart-line pr-2"></i>Trading</li>
+                    <i class="fas fa-chart-line pr-2"></i>Trading</a></li>
                 </ul>
               </div>
               <!-- header-first end -->
@@ -167,17 +183,40 @@
     </div>
 
     <div id="page-start"></div>
+    <br><br><br>
+
+    <section class="section clearfix text-center">
+      <p class="text-center text-muted"><h1>Photography Print Quality</h1></p>
+    </section>
     
     <!-- section start -->
     <!-- ================ -->
     <section class="light-gray-bg pv-20">
-      <br>
-      <br>
-      <br>
       <section class="section clearfix text-center">
-        <p class="text-center text-muted"><h1>Apps</h1></p>
+        <div id="page-start"></div>
+        <section class="section clearfix text-center">
+          <FORM NAME="myform" ACTION="" METHOD="GET">
+            File Width in Pixels:
+            <INPUT TYPE="text" NAME="fileWidth" VALUE="6000" SIZE="7">
+            <BR>
+            File Height in Pixels:
+            <INPUT TYPE="text" NAME="fileHeight" VALUE="4000" SIZE="7">
+            <BR>
+            Photography Width in cm:
+            <INPUT TYPE="text" NAME="photoWidth" VALUE="30" SIZE="5">
+            <BR>
+            Photography Height in cm:
+            <INPUT TYPE="text" NAME="photoHeight" VALUE="20" SIZE="5">
+            <BR>
+            <BR>
+            <INPUT TYPE="button" NAME="button" Value="Enter" onClick="getPpi(this.form)">
+            <BR>
+            <BR>
+            PPI:
+            <INPUT TYPE="text" NAME="printPpi" VALUE="" ID="ppi" SIZE="4">
+            </FORM>
+        </section>
       </section>
-      
     </section>
     <!-- section end -->
 
