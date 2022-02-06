@@ -1,0 +1,448 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Fuzzy Logic Introduction</title><meta name="generator" content="MATLAB 9.10"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-02-05"><meta name="DC.source" content="fzl001.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Fuzzy Logic Introduction</h1><!--introduction--><p>Augusto Damasceno</p><p><a href="mailto:augustodamasceno@protonmail.com">augustodamasceno@protonmail.com</a></p><p>augustodamasceno.org</p><p>This lab is part of the project ADlabs.</p><p>See <a href="https://github.com/augustodamasceno/adlabs/">https://github.com/augustodamasceno/adlabs/</a></p><p>ADlabs Licenses</p><p>All softwares are licensed under the BSD-2-Clause</p><p>Images, PDFs or any other types of files that are not software are licensed under a Creative Commons Attribution 4.0 International License.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clean</a></li><li><a href="#2">Configuration</a></li><li><a href="#3">Crisp and Fuzzy Sets for a temperature range.</a></li><li><a href="#4">Russell&#8217;s Paradox</a></li><li><a href="#5">Membership Functions</a></li><li><a href="#6">Definitions</a></li><li><a href="#7">Fuzzy Operators</a></li><li><a href="#8">Defuzzification - Center of Area or Center of Gravity</a></li><li><a href="#9">Defuzzification -  Center of Sums</a></li><li><a href="#10">Defuzzification -  Heigth</a></li><li><a href="#11">The Basic Tipping Problem</a></li><li><a href="#12">Functions</a></li><li><a href="#13">References</a></li></ul></div><h2 id="1">Clean</h2><pre class="codeinput"><span class="comment">% Removes all variables from the workspace.</span>
+clear;
+<span class="comment">% Close all figures and</span>
+close <span class="string">all</span>;
+<span class="comment">% Clear Command Window</span>
+</pre><h2 id="2">Configuration</h2><pre class="codeinput">figureIdx = 1;
+<span class="keyword">if</span> ~exist(<span class="string">'img'</span>, <span class="string">'dir'</span>)
+   mkdir(<span class="string">'img'</span>)
+<span class="keyword">end</span>
+</pre><h2 id="3">Crisp and Fuzzy Sets for a temperature range.</h2><pre class="codeinput">figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+t = 29:0.1:31;
+half = floor(length(t)/2);
+
+<span class="comment">% Classical Logic - Crisp Sets</span>
+subplot(1, 2, 1);
+HC = hotCrisp(t);
+plot(t, HC, <span class="string">'r'</span>);
+hold <span class="string">on</span>;
+plot(t(half), HC(half), <span class="string">'bo'</span>);
+plot(t(half+1), HC(half+1), <span class="string">'bo'</span>);
+xlim([29 31]);
+ylim([0 1.15]);
+title(<span class="string">'Crisp Set'</span>);
+xlabel(<span class="string">'Temperature'</span>);
+ylabel(<span class="string">'Is Hot?'</span>);
+
+<span class="comment">% Fuzzy Logic - Fuzzy Sets</span>
+subplot(1, 2, 2);
+HF = hotFuzzy(t);
+plot(t, HF, <span class="string">'r'</span>);
+hold <span class="string">on</span>;
+plot(t(half), HF(half), <span class="string">'bo'</span>);
+plot(t(half+1), HF(half+1), <span class="string">'bo'</span>);
+xlim([29 31]);
+ylim([0.75 1.05]);
+title(<span class="string">'Fuzzy Set'</span>);
+xlabel(<span class="string">'Temperature'</span>);
+ylabel(<span class="string">'Is Hot?'</span>);
+<span class="comment">% Save Figure Image File</span>
+saveas(figs(figureIdx-1), <span class="string">'img/IsHot-Crisp-and-Fuzzy-sets.png'</span>);
+</pre><img vspace="5" hspace="5" src="fzl001_01.png" alt=""> <h2 id="4">Russell&#8217;s Paradox</h2><pre class="codeinput"><span class="comment">% Call the set of all sets that are not members of themselves R</span>
+<span class="comment">% If R is a member of itself, then by definition it must not be a member</span>
+<span class="comment">% of itself. Similarly, if R is not a member of itself, then by definition</span>
+<span class="comment">% it must be a member of itself.</span>
+</pre><h2 id="5">Membership Functions</h2><pre class="codeinput">figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+x = 0:0.01:1;
+
+plot(x, trapmf(x, [0, 0.1, 0.2, 0.3]),<span class="string">'DisplayName'</span>, <span class="string">'Trapezoidal'</span>);
+hold <span class="string">on</span>;
+plot(x, trimf(x, [0.15, 0.4, 0.5]), <span class="string">'DisplayName'</span>, <span class="string">'Triangular '</span>);
+plot(x, gaussmf(x, [0.15, 0.8]),<span class="string">'DisplayName'</span>, <span class="string">'Gaussian'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+title(<span class="string">' Membership Functions'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+legend;
+<span class="comment">% Save Figure Image File</span>
+saveas(figs(figureIdx-1), <span class="string">'img/Membership-Functions.png'</span>);
+</pre><img vspace="5" hspace="5" src="fzl001_02.png" alt=""> <h2 id="6">Definitions</h2><pre class="codeinput"><span class="comment">% Support</span>
+<span class="comment">% Crisp subset where the membership function is larger than zero.</span>
+
+<span class="comment">% Core</span>
+<span class="comment">% Crisp subset where the membership function is 1.</span>
+
+<span class="comment">% Height</span>
+<span class="comment">% The supremum the membership function.</span>
+
+<span class="comment">% Normal Fuzzy Set</span>
+<span class="comment">% At least one value where the membership function is 1;</span>
+
+<span class="comment">% Alpha-cut</span>
+<span class="comment">% The crisp subset where the  membership function is equal or less than alpha.</span>
+
+<span class="comment">% Strict-cut</span>
+<span class="comment">% The crisp subset where the  membership function is less than alpha.</span>
+
+<span class="comment">% Convexity</span>
+<span class="comment">% If all alpha-cuts are convex.</span>
+</pre><h2 id="7">Fuzzy Operators</h2><pre class="codeinput">figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+x = 0:0.01:1;
+A = trimf(x, [0, 0.5, 0.7]);
+B = trimf(x, [0.5, 0.8, 1]);
+
+subplot(3, 2, 1);
+plot(x, A,<span class="string">'DisplayName'</span>, <span class="string">'A'</span>);
+title(<span class="string">'A'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 2);
+plot(x, B, <span class="string">'DisplayName'</span>, <span class="string">'B'</span>);
+title(<span class="string">'B'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 3);
+plot(x, max([A; B]),<span class="string">'DisplayName'</span>, <span class="string">'OR - MAX'</span>);
+title(<span class="string">'OR - MAX'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 4);
+plot(x, min([A; B]),<span class="string">'DisplayName'</span>, <span class="string">'AND - MIN'</span>);
+title(<span class="string">'AND - MIN'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 5);
+plot(x, 1-A,<span class="string">'DisplayName'</span>, <span class="string">'NOT A - COMPLEMENT'</span>);
+title(<span class="string">'NOT A - COMPLEMENT'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 6);
+plot(x, 1-B,<span class="string">'DisplayName'</span>, <span class="string">'NOT B - COMPLEMENT'</span>);
+title(<span class="string">'NOT B - COMPLEMENT'</span>);
+xlabel(<span class="string">'Universe of Discourse'</span>);
+ylabel(<span class="string">'Degree of Membership'</span>);
+xlim([0 1]);
+ylim([0 1.1]);
+<span class="comment">% Save Figure Image File</span>
+saveas(figs(figureIdx-1), <span class="string">'img/fuzzy-operators.png'</span>);
+</pre><img vspace="5" hspace="5" src="fzl001_03.png" alt=""> <img vspace="5" hspace="5" src="fzl001_04.png" alt=""> <h2 id="8">Defuzzification - Center of Area or Center of Gravity</h2><p><img src="fzl001_eq02971712202490589514.png" alt="$\hbox{\fontsize{20}{25}\selectfont\(   x^{*} = \frac{\sum_{i=1}^{n} x_{i} \mu U(x_{i})}{\sum_{i=1}^{n}   \mu U(x_{i})} \)}$"></p><h2 id="9">Defuzzification -  Center of Sums</h2><p><img src="fzl001_eq17393323222690879725.png" alt="$\hbox{\fontsize{20}{25}\selectfont\(   x^{*} = \frac{\sum_{i=1}^{n} x_{i} \sum_{k=1}^{l}\mu   k(x_{i})}{\sum_{i=1}^{n} \sum_{k=1}^{l}\mu k(x_{i})} \)}$"></p><h2 id="10">Defuzzification -  Heigth</h2><p><img src="fzl001_eq17516615663189499448.png" alt="$\hbox{\fontsize{20}{25}\selectfont\(   x^{*} = \frac{\sum_{i=1}^{L} x_{i} \mu_{i}(x)}{\sum_{i=1}^{L}   \mu(x_{i})} \)}$"></p><h2 id="11">The Basic Tipping Problem</h2><pre class="codeinput">fuzzyLogicDesigner(<span class="string">'tipper.fis'</span>);
+fis = readfis(<span class="string">'tipper'</span>);
+
+service = 7;
+food = 5;
+fprintf(<span class="string">'Service = %d, Food = %d, Then Tip = %.2d\n'</span>, <span class="keyword">...</span>
+    service, food, evalfis(fis,[service, food]));
+</pre><pre class="codeoutput">Service = 7, Food = 5, Then Tip = 1.78e+01
+</pre><img vspace="5" hspace="5" src="fzl001_05.png" alt=""> <img vspace="5" hspace="5" src="fzl001_06.png" alt=""> <h2 id="12">Functions</h2><pre class="codeinput"><span class="keyword">function</span> H = hotCrisp(x)
+   H = x;
+   H(H&lt;30) = 0;
+   H(H&gt;=30) = 1;
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> H = hotFuzzy(x)
+    H = trapmf(x, [25, 30, 1000, 1000]);
+<span class="keyword">end</span>
+</pre><h2 id="13">References</h2><p>1. MATLAB DOC - <a href="https://www.mathworks.com/help/">https://www.mathworks.com/help/</a></p><p>2. Coppin, B. (2004). Artificial intelligence illuminated.   Jones &amp; Bartlett Learning.</p><p>3. Oviedo, J., Vandewalle, J., Wertz, V.: Fuzzy Logic, Identification   and Predictive Control. Advances in Industrial Control.   Springer London (2004)</p><p>4. Stanford Encyclopedia of Philosophy. Russell's Paradox.   <a href="https://plato.stanford.edu/entries/russell-paradox/">https://plato.stanford.edu/entries/russell-paradox/</a></p><p>5. Build Fuzzy Systems Using Fuzzy Logic Designer -   <a href="https://www.mathworks.com/help/fuzzy/building-systems-with-fuzzy-logic-toolbox-software.html#brzqs45">https://www.mathworks.com/help/fuzzy/building-systems-with-fuzzy-logic-toolbox-software.html#brzqs45</a></p><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2021a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Fuzzy Logic Introduction   
+%
+% Augusto Damasceno  
+%
+% augustodamasceno@protonmail.com  
+%
+% augustodamasceno.org  
+%
+%
+% This lab is part of the project ADlabs.  
+%
+% See https://github.com/augustodamasceno/adlabs/  
+%
+% ADlabs Licenses  
+%
+% All softwares are licensed under the BSD-2-Clause  
+%
+% Images, PDFs or any other types of files that are not software are   
+% licensed under a Creative Commons Attribution 4.0 International License.
+% 
+
+%% Clean
+
+% Removes all variables from the workspace.
+clear;
+% Close all figures and
+close all;
+% Clear Command Window
+
+%% Configuration
+
+figureIdx = 1;
+if ~exist('img', 'dir')
+   mkdir('img')
+end
+
+%% Crisp and Fuzzy Sets for a temperature range.
+
+figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+t = 29:0.1:31;
+half = floor(length(t)/2);
+
+% Classical Logic - Crisp Sets
+subplot(1, 2, 1);
+HC = hotCrisp(t);
+plot(t, HC, 'r');
+hold on;
+plot(t(half), HC(half), 'bo');
+plot(t(half+1), HC(half+1), 'bo');
+xlim([29 31]);
+ylim([0 1.15]);
+title('Crisp Set');
+xlabel('Temperature');
+ylabel('Is Hot?');
+
+% Fuzzy Logic - Fuzzy Sets
+subplot(1, 2, 2);
+HF = hotFuzzy(t);
+plot(t, HF, 'r');
+hold on;
+plot(t(half), HF(half), 'bo');
+plot(t(half+1), HF(half+1), 'bo');
+xlim([29 31]);
+ylim([0.75 1.05]);
+title('Fuzzy Set');
+xlabel('Temperature');
+ylabel('Is Hot?');
+% Save Figure Image File
+saveas(figs(figureIdx-1), 'img/IsHot-Crisp-and-Fuzzy-sets.png');
+
+%% Russell’s Paradox
+
+% Call the set of all sets that are not members of themselves R
+% If R is a member of itself, then by definition it must not be a member 
+% of itself. Similarly, if R is not a member of itself, then by definition 
+% it must be a member of itself.
+
+%% Membership Functions
+
+figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+x = 0:0.01:1;
+
+plot(x, trapmf(x, [0, 0.1, 0.2, 0.3]),'DisplayName', 'Trapezoidal');
+hold on;
+plot(x, trimf(x, [0.15, 0.4, 0.5]), 'DisplayName', 'Triangular ');
+plot(x, gaussmf(x, [0.15, 0.8]),'DisplayName', 'Gaussian');
+xlim([0 1]);
+ylim([0 1.1]);
+title(' Membership Functions');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+legend;
+% Save Figure Image File
+saveas(figs(figureIdx-1), 'img/Membership-Functions.png');
+
+%% Definitions
+
+% Support
+% Crisp subset where the membership function is larger than zero.
+
+% Core
+% Crisp subset where the membership function is 1.
+
+% Height
+% The supremum the membership function.
+
+% Normal Fuzzy Set
+% At least one value where the membership function is 1;
+
+% Alpha-cut
+% The crisp subset where the  membership function is equal or less than alpha.
+
+% Strict-cut
+% The crisp subset where the  membership function is less than alpha.
+
+% Convexity
+% If all alpha-cuts are convex.
+
+%% Fuzzy Operators
+
+figs(figureIdx) = figure(figureIdx);
+figureIdx = figureIdx + 1;
+x = 0:0.01:1;
+A = trimf(x, [0, 0.5, 0.7]);
+B = trimf(x, [0.5, 0.8, 1]);
+
+subplot(3, 2, 1);
+plot(x, A,'DisplayName', 'A');
+title('A');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 2);
+plot(x, B, 'DisplayName', 'B');
+title('B');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 3);
+plot(x, max([A; B]),'DisplayName', 'OR - MAX');
+title('OR - MAX');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 4);
+plot(x, min([A; B]),'DisplayName', 'AND - MIN');
+title('AND - MIN');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 5);
+plot(x, 1-A,'DisplayName', 'NOT A - COMPLEMENT');
+title('NOT A - COMPLEMENT');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+subplot(3, 2, 6);
+plot(x, 1-B,'DisplayName', 'NOT B - COMPLEMENT');
+title('NOT B - COMPLEMENT');
+xlabel('Universe of Discourse');
+ylabel('Degree of Membership');
+xlim([0 1]);
+ylim([0 1.1]);
+% Save Figure Image File
+saveas(figs(figureIdx-1), 'img/fuzzy-operators.png');
+
+%% Defuzzification - Center of Area or Center of Gravity
+% $\hbox{\fontsize{20}{25}\selectfont\( 
+%   x^{*} = \frac{\sum_{i=1}^{n} x_{i} \mu U(x_{i})}{\sum_{i=1}^{n}
+%   \mu U(x_{i})}
+% \)}$
+
+%% Defuzzification -  Center of Sums
+% $\hbox{\fontsize{20}{25}\selectfont\( 
+%   x^{*} = \frac{\sum_{i=1}^{n} x_{i} \sum_{k=1}^{l}\mu 
+%   k(x_{i})}{\sum_{i=1}^{n} \sum_{k=1}^{l}\mu k(x_{i})}
+% \)}$
+
+%% Defuzzification -  Heigth
+% $\hbox{\fontsize{20}{25}\selectfont\( 
+%   x^{*} = \frac{\sum_{i=1}^{L} x_{i} \mu_{i}(x)}{\sum_{i=1}^{L} 
+%   \mu(x_{i})}
+% \)}$
+
+%% The Basic Tipping Problem
+fuzzyLogicDesigner('tipper.fis');
+fis = readfis('tipper');
+
+service = 7;
+food = 5;
+fprintf('Service = %d, Food = %d, Then Tip = %.2d\n', ...
+    service, food, evalfis(fis,[service, food]));
+
+%% Functions
+function H = hotCrisp(x)
+   H = x;
+   H(H<30) = 0;
+   H(H>=30) = 1;
+end
+
+function H = hotFuzzy(x)
+    H = trapmf(x, [25, 30, 1000, 1000]);
+end
+
+%% References
+%
+% 1. MATLAB DOC - https://www.mathworks.com/help/
+%
+% 2. Coppin, B. (2004). Artificial intelligence illuminated. 
+%   Jones & Bartlett Learning.
+%
+% 3. Oviedo, J., Vandewalle, J., Wertz, V.: Fuzzy Logic, Identification 
+%   and Predictive Control. Advances in Industrial Control. 
+%   Springer London (2004)
+%
+% 4. Stanford Encyclopedia of Philosophy. Russell's Paradox. 
+%   https://plato.stanford.edu/entries/russell-paradox/
+%
+% 5. Build Fuzzy Systems Using Fuzzy Logic Designer - 
+%   https://www.mathworks.com/help/fuzzy/building-systems-with-fuzzy-logic-toolbox-software.html#brzqs45
+##### SOURCE END #####
+--></body></html>
