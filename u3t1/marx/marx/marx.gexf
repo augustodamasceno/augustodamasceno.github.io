@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://gexf.net/1.3" version="1.3" xmlns:viz="http://gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gexf.net/1.3 http://gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2025-01-25">
+    <creator>Gephi 0.10.1</creator>
+    <title></title>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <nodes>
+      <node id="labour" label="labour">
+        <viz:size value="10.0"/>
+        <viz:position x="-336.5504" y="-140.47874"/>
+      </node>
+      <node id="power" label="power">
+        <viz:size value="10.0"/>
+        <viz:position x="0.29101586" y="-255.89174"/>
+      </node>
+      <node id="capital" label="capital">
+        <viz:size value="10.0"/>
+        <viz:position x="233.14487" y="-122.505"/>
+      </node>
+      <node id="money" label="money">
+        <viz:size value="10.0"/>
+        <viz:position x="206.30916" y="288.51703"/>
+      </node>
+      <node id="capitalist" label="capitalist">
+        <viz:size value="10.0"/>
+        <viz:position x="-120.76239" y="-461.44543"/>
+      </node>
+      <node id="means" label="means">
+        <viz:size value="10.0"/>
+        <viz:position x="-203.85373" y="503.14328"/>
+      </node>
+      <node id="working" label="working">
+        <viz:size value="10.0"/>
+        <viz:position x="473.68713" y="36.071667"/>
+      </node>
+      <node id="day" label="day">
+        <viz:size value="10.0"/>
+        <viz:position x="-256.64645" y="-423.59598"/>
+      </node>
+      <node id="surplus" label="surplus">
+        <viz:size value="10.0"/>
+        <viz:position x="274.57925" y="-5.483247"/>
+      </node>
+      <node id="hours" label="hours">
+        <viz:size value="10.0"/>
+        <viz:position x="-350.35956" y="338.5833"/>
+      </node>
+      <node id="production" label="production">
+        <viz:size value="10.0"/>
+        <viz:position x="115.0509" y="419.19135"/>
+      </node>
+      <node id="form" label="form">
+        <viz:size value="10.0"/>
+        <viz:position x="-197.6283" y="-76.95195"/>
+      </node>
+      <node id="process" label="process">
+        <viz:size value="10.0"/>
+        <viz:position x="414.31326" y="441.592"/>
+      </node>
+      <node id="value" label="value">
+        <viz:size value="10.0"/>
+        <viz:position x="-179.75572" y="-498.25287"/>
+      </node>
+      <node id="commodities" label="commodities">
+        <viz:size value="10.0"/>
+        <viz:position x="-414.13077" y="-392.1804"/>
+      </node>
+      <node id="commodity" label="commodity">
+        <viz:size value="10.0"/>
+        <viz:position x="21.982662" y="320.6472"/>
+      </node>
+      <node id="work" label="work">
+        <viz:size value="10.0"/>
+        <viz:position x="265.91107" y="-453.49026"/>
+      </node>
+      <node id="time" label="time">
+        <viz:size value="10.0"/>
+        <viz:position x="126.92046" y="-420.0055"/>
+      </node>
+      <node id="labourer" label="labourer">
+        <viz:size value="10.0"/>
+        <viz:position x="-388.8098" y="16.035048"/>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="131" source="labour" target="power"/>
+      <edge id="436" source="labour" target="capital"/>
+      <edge id="820" source="labour" target="money"/>
+      <edge id="1533" source="labour" target="capitalist"/>
+      <edge id="1584" source="labour" target="means"/>
+      <edge id="2234" source="labour" target="working"/>
+      <edge id="2378" source="labour" target="day"/>
+      <edge id="2635" source="labour" target="surplus"/>
+      <edge id="2749" source="labour" target="hours"/>
+      <edge id="3102" source="labour" target="production"/>
+      <edge id="3225" source="labour" target="form"/>
+      <edge id="3312" source="labour" target="process"/>
+      <edge id="3752" source="labour" target="value"/>
+      <edge id="3887" source="labour" target="commodities"/>
+      <edge id="4489" source="labour" target="commodity"/>
+      <edge id="4808" source="labour" target="work"/>
+      <edge id="4976" source="labour" target="time"/>
+      <edge id="5018" source="labour" target="labour"/>
+      <edge id="5244" source="labour" target="labourer"/>
+      <edge id="6549" source="power" target="value"/>
+      <edge id="6550" source="power" target="production"/>
+      <edge id="6551" source="power" target="capital"/>
+      <edge id="6595" source="power" target="hours"/>
+      <edge id="6772" source="power" target="power"/>
+      <edge id="6796" source="power" target="capitalist"/>
+      <edge id="6902" source="power" target="means"/>
+      <edge id="7235" source="power" target="commodity"/>
+      <edge id="7533" source="power" target="form"/>
+      <edge id="7724" source="power" target="process"/>
+      <edge id="7889" source="power" target="work"/>
+      <edge id="8282" source="power" target="time"/>
+      <edge id="8328" source="power" target="money"/>
+      <edge id="8451" source="power" target="working"/>
+      <edge id="8798" source="power" target="day"/>
+      <edge id="8902" source="power" target="labourer"/>
+      <edge id="8967" source="power" target="commodities"/>
+      <edge id="9337" source="power" target="surplus"/>
+      <edge id="11447" source="capital" target="value"/>
+      <edge id="11448" source="capital" target="production"/>
+      <edge id="11508" source="capital" target="hours"/>
+      <edge id="11781" source="capital" target="capitalist"/>
+      <edge id="11885" source="capital" target="means"/>
+      <edge id="12157" source="capital" target="commodity"/>
+      <edge id="12355" source="capital" target="capital"/>
+      <edge id="12466" source="capital" target="form"/>
+      <edge id="12703" source="capital" target="process"/>
+      <edge id="12901" source="capital" target="work"/>
+      <edge id="13361" source="capital" target="time"/>
+      <edge id="13428" source="capital" target="money"/>
+      <edge id="13579" source="capital" target="working"/>
+      <edge id="13980" source="capital" target="day"/>
+      <edge id="14116" source="capital" target="labourer"/>
+      <edge id="14189" source="capital" target="commodities"/>
+      <edge id="14648" source="capital" target="surplus"/>
+      <edge id="17230" source="money" target="value"/>
+      <edge id="17231" source="money" target="production"/>
+      <edge id="17232" source="money" target="form"/>
+      <edge id="17233" source="money" target="time"/>
+      <edge id="17234" source="money" target="day"/>
+      <edge id="17235" source="money" target="surplus"/>
+      <edge id="17263" source="money" target="hours"/>
+      <edge id="17417" source="money" target="capitalist"/>
+      <edge id="17482" source="money" target="means"/>
+      <edge id="17644" source="money" target="commodity"/>
+      <edge id="17943" source="money" target="process"/>
+      <edge id="18038" source="money" target="work"/>
+      <edge id="18278" source="money" target="money"/>
+      <edge id="18379" source="money" target="working"/>
+      <edge id="18676" source="money" target="labourer"/>
+      <edge id="18713" source="money" target="commodities"/>
+      <edge id="23356" source="capitalist" target="value"/>
+      <edge id="23357" source="capitalist" target="production"/>
+      <edge id="23358" source="capitalist" target="form"/>
+      <edge id="23359" source="capitalist" target="time"/>
+      <edge id="23360" source="capitalist" target="day"/>
+      <edge id="23361" source="capitalist" target="surplus"/>
+      <edge id="23362" source="capitalist" target="working"/>
+      <edge id="23363" source="capitalist" target="commodities"/>
+      <edge id="23364" source="capitalist" target="means"/>
+      <edge id="23393" source="capitalist" target="hours"/>
+      <edge id="23566" source="capitalist" target="capitalist"/>
+      <edge id="23889" source="capitalist" target="commodity"/>
+      <edge id="24288" source="capitalist" target="process"/>
+      <edge id="24416" source="capitalist" target="work"/>
+      <edge id="25149" source="capitalist" target="labourer"/>
+      <edge id="25965" source="means" target="value"/>
+      <edge id="25966" source="means" target="production"/>
+      <edge id="25967" source="means" target="form"/>
+      <edge id="25968" source="means" target="time"/>
+      <edge id="25969" source="means" target="day"/>
+      <edge id="25970" source="means" target="surplus"/>
+      <edge id="25971" source="means" target="working"/>
+      <edge id="25972" source="means" target="commodities"/>
+      <edge id="26002" source="means" target="hours"/>
+      <edge id="26227" source="means" target="means"/>
+      <edge id="26450" source="means" target="commodity"/>
+      <edge id="26842" source="means" target="process"/>
+      <edge id="26961" source="means" target="work"/>
+      <edge id="27712" source="means" target="labourer"/>
+      <edge id="31437" source="working" target="value"/>
+      <edge id="31438" source="working" target="production"/>
+      <edge id="31439" source="working" target="form"/>
+      <edge id="31440" source="working" target="time"/>
+      <edge id="31441" source="working" target="day"/>
+      <edge id="31442" source="working" target="surplus"/>
+      <edge id="31474" source="working" target="hours"/>
+      <edge id="31906" source="working" target="commodity"/>
+      <edge id="32211" source="working" target="process"/>
+      <edge id="32305" source="working" target="work"/>
+      <edge id="32655" source="working" target="working"/>
+      <edge id="33027" source="working" target="labourer"/>
+      <edge id="33067" source="working" target="commodities"/>
+      <edge id="34106" source="day" target="value"/>
+      <edge id="34107" source="day" target="production"/>
+      <edge id="34108" source="day" target="form"/>
+      <edge id="34109" source="day" target="time"/>
+      <edge id="34139" source="day" target="hours"/>
+      <edge id="34542" source="day" target="commodity"/>
+      <edge id="34819" source="day" target="process"/>
+      <edge id="34906" source="day" target="work"/>
+      <edge id="35403" source="day" target="day"/>
+      <edge id="35484" source="day" target="labourer"/>
+      <edge id="35521" source="day" target="commodities"/>
+      <edge id="35799" source="day" target="surplus"/>
+      <edge id="37116" source="surplus" target="value"/>
+      <edge id="37117" source="surplus" target="production"/>
+      <edge id="37118" source="surplus" target="form"/>
+      <edge id="37119" source="surplus" target="time"/>
+      <edge id="37144" source="surplus" target="hours"/>
+      <edge id="37458" source="surplus" target="commodity"/>
+      <edge id="37686" source="surplus" target="process"/>
+      <edge id="37764" source="surplus" target="work"/>
+      <edge id="38219" source="surplus" target="labourer"/>
+      <edge id="38247" source="surplus" target="commodities"/>
+      <edge id="38396" source="surplus" target="surplus"/>
+      <edge id="38966" source="hours" target="value"/>
+      <edge id="38967" source="hours" target="production"/>
+      <edge id="38968" source="hours" target="form"/>
+      <edge id="38969" source="hours" target="time"/>
+      <edge id="38970" source="hours" target="commodities"/>
+      <edge id="38971" source="hours" target="work"/>
+      <edge id="38972" source="hours" target="commodity"/>
+      <edge id="38988" source="hours" target="hours"/>
+      <edge id="39512" source="hours" target="process"/>
+      <edge id="40010" source="hours" target="labourer"/>
+      <edge id="41567" source="production" target="value"/>
+      <edge id="41944" source="production" target="commodity"/>
+      <edge id="41971" source="production" target="production"/>
+      <edge id="42201" source="production" target="form"/>
+      <edge id="42333" source="production" target="process"/>
+      <edge id="42450" source="production" target="work"/>
+      <edge id="42718" source="production" target="time"/>
+      <edge id="43181" source="production" target="labourer"/>
+      <edge id="43226" source="production" target="commodities"/>
+      <edge id="44071" source="form" target="value"/>
+      <edge id="44341" source="form" target="commodity"/>
+      <edge id="44460" source="form" target="form"/>
+      <edge id="44568" source="form" target="process"/>
+      <edge id="44650" source="form" target="work"/>
+      <edge id="44833" source="form" target="time"/>
+      <edge id="45154" source="form" target="labourer"/>
+      <edge id="45183" source="form" target="commodities"/>
+      <edge id="45768" source="process" target="value"/>
+      <edge id="45769" source="process" target="time"/>
+      <edge id="45770" source="process" target="commodities"/>
+      <edge id="45771" source="process" target="work"/>
+      <edge id="45772" source="process" target="commodity"/>
+      <edge id="46110" source="process" target="process"/>
+      <edge id="46567" source="process" target="labourer"/>
+      <edge id="48152" source="value" target="commodity"/>
+      <edge id="48494" source="value" target="work"/>
+      <edge id="48666" source="value" target="time"/>
+      <edge id="48833" source="value" target="value"/>
+      <edge id="49005" source="value" target="labourer"/>
+      <edge id="49042" source="value" target="commodities"/>
+      <edge id="49690" source="commodities" target="time"/>
+      <edge id="49889" source="commodities" target="commodity"/>
+      <edge id="50085" source="commodities" target="work"/>
+      <edge id="50342" source="commodities" target="labourer"/>
+      <edge id="50362" source="commodities" target="commodities"/>
+      <edge id="51541" source="commodity" target="time"/>
+      <edge id="51542" source="commodity" target="work"/>
+      <edge id="51610" source="commodity" target="commodity"/>
+      <edge id="51934" source="commodity" target="labourer"/>
+      <edge id="52490" source="work" target="time"/>
+      <edge id="52990" source="work" target="work"/>
+      <edge id="53523" source="work" target="labourer"/>
+      <edge id="54540" source="time" target="time"/>
+      <edge id="54873" source="time" target="labourer"/>
+      <edge id="55667" source="labourer" target="labourer"/>
+    </edges>
+  </graph>
+</gexf>
