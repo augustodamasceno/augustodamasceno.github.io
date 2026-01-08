@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Exponential Function Study Tool - Interactive Visualization | Augusto Damasceno</title>
+  <meta name="title" content="Exponential Function Study Tool - Interactive Visualization">
+  <meta name="description" content="Interactive exponential function calculator with tau helpers, amplitude control, and real-time plotting. Perfect for studying exponential growth, decay, and signal processing.">
+  <meta name="keywords" content="exponential function, tau, time constant, exponential decay, exponential growth, signal processing, mathematics calculator, function plotter">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/exponential/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/exponential/">
+  <meta property="og:title" content="Exponential Function Study Tool">
+  <meta property="og:description" content="Interactive exponential function calculator with tau helpers and real-time plotting. Study growth and decay patterns.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://augustodamasceno.org/exponential/">
+  <meta property="twitter:title" content="Exponential Function Study Tool">
+  <meta property="twitter:description" content="Interactive exponential calculator with tau helpers and real-time plotting.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Exponential Function Study Tool",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Interactive exponential function calculator with tau helpers, amplitude control, and real-time plotting for studying growth and decay patterns",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Exponential calculations, Tau helpers, Interactive plotting, Growth and decay analysis"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- Exponential Study CSS -->
+  <link href="../css/exponential-study.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="../plugins/charts/Chart.min.js"></script>
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <div class="header-first clearfix">
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto"></div>
+            <div class="col-auto hidden-md-down"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+          
+          <!-- main start -->
+          <div class="main col-12">
+
+            <!-- Page title start -->
+            <div class="page-title">
+              <h1 class="title">Exponential Function Study</h1>
+              <div class="separator-2"></div>
+            </div>
+            <!-- Page title end -->
+
+            <div class="row">
+              <div class="col-lg-12">
+                
+                <!-- Exponential Study Tool -->
+                <div class="exp-study-container">
+                  
+                  <!-- Controls Section -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-chart-line"></i> Function Parameters
+                      </h4>
+                      
+                      <div class="function-display mb-4">
+                        <p class="text-center font-weight-bold" style="font-size: 1.3em;">
+                          f(x) = <span id="amplitudeDisplay">1</span> × <span id="baseDisplay">e</span><sup>
+                            <span style="font-size: 0.8em;">
+                              (<span id="xSignDisplay"></span>x × <span id="tau1Display">1</span> × <span id="const1Display">1</span>) / 
+                              (<span id="tau2Display">43.43</span> × <span id="const2Display">1</span>)
+                            </span>
+                          </sup>
+                        </p>
+                      </div>
+
+                      <div class="row">
+                        <!-- Base -->
+                        <div class="col-md-6 mb-3">
+                          <label for="baseInput" class="form-label">
+                            <strong>Base:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="baseInput" 
+                                 value="2.71828" 
+                                 step="0.01"
+                                 min="0.01">
+                          <small class="form-text text-muted">Natural base e ≈ 2.71828</small>
+                        </div>
+
+                        <!-- Amplitude -->
+                        <div class="col-md-6 mb-3">
+                          <label for="amplitudeInput" class="form-label">
+                            <strong>Amplitude (A):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="amplitudeInput" 
+                                 value="1" 
+                                 step="0.1">
+                          <small class="form-text text-muted">Multiplier for the function</small>
+                        </div>
+
+                        <!-- Sign of X -->
+                        <div class="col-md-6 mb-3">
+                          <label for="xSignCheckbox" class="form-label">
+                            <strong>Sign of x:</strong>
+                          </label>
+                          <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="checkbox" 
+                                   id="xSignCheckbox"
+                                   checked>
+                            <label class="form-check-label" for="xSignCheckbox">
+                              Negative x (decay)
+                            </label>
+                          </div>
+                          <small class="form-text text-muted">Check for negative exponent</small>
+                        </div>
+
+                        <!-- Tau1 -->
+                        <div class="col-md-6 mb-3">
+                          <label for="tau1Input" class="form-label">
+                            <strong>τ₁ (Tau 1):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="tau1Input" 
+                                 value="1" 
+                                 step="0.1">
+                        </div>
+
+                        <!-- Constant 1 -->
+                        <div class="col-md-6 mb-3">
+                          <label for="const1Input" class="form-label">
+                            <strong>Constant 1:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="const1Input" 
+                                 value="1" 
+                                 step="0.1">
+                        </div>
+
+                        <!-- Tau2 -->
+                        <div class="col-md-6 mb-3">
+                          <label for="tau2Input" class="form-label">
+                            <strong>τ₂ (Tau 2):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="tau2Input" 
+                                 value="43.4294" 
+                                 step="0.1"
+                                 min="0.01">
+                          <small class="form-text text-muted">
+                            Must be non-zero<br>
+                            <strong>τ Helper:</strong> <span id="tauHelperDisplay">N/A</span> = steps / ln(A/target)
+                          </small>
+                        </div>
+
+                        <!-- Constant 2 -->
+                        <div class="col-md-6 mb-3">
+                          <label for="const2Input" class="form-label">
+                            <strong>Constant 2:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="const2Input" 
+                                 value="1" 
+                                 step="0.1"
+                                 min="0.01">
+                          <small class="form-text text-muted">Must be non-zero</small>
+                        </div>
+
+                        <!-- Min Desired Value for τ Helper -->
+                        <div class="col-md-6 mb-3">
+                          <label for="minDesiredValueInput" class="form-label">
+                            <strong>Target Value:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="minDesiredValueInput" 
+                                 value="0.1" 
+                                 step="0.01"
+                                 min="0">
+                          <small class="form-text text-muted">Fraction of amplitude to reach</small>
+                        </div>
+
+                        <!-- X Range Min -->
+                        <div class="col-md-6 mb-3">
+                          <label for="rangeXMinInput" class="form-label">
+                            <strong>X-Axis Min:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="rangeXMinInput" 
+                                 value="0" 
+                                 step="1">
+                        </div>
+
+                        <!-- X Range Max -->
+                        <div class="col-md-6 mb-3">
+                          <label for="rangeXMaxInput" class="form-label">
+                            <strong>X-Axis Max:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="rangeXMaxInput" 
+                                 value="100" 
+                                 step="1">
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Chart Section -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="card-title mb-0">
+                          <i class="fas fa-chart-area"></i> Function Plot
+                        </h4>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-download"></i> Download Chart
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#" onclick="downloadChart('png'); return false;">
+                              <i class="fas fa-file-image"></i> PNG Image
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="downloadChart('jpg'); return false;">
+                              <i class="fas fa-file-image"></i> JPEG Image
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="downloadChart('svg'); return false;">
+                              <i class="fas fa-file-code"></i> SVG Vector
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chart-container">
+                        <canvas id="exponentialChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Exponential Study Tool end -->
+
+              </div>
+            </div>
+
+          </div>
+          <!-- main end -->
+
+        </div>
+      </div>
+
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/meursault.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../js/exponential-study.js"></script>
+
+</body>
+
+</html>

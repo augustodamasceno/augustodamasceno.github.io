@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Time & Date Tools | Augusto Damasceno</title>
+  <meta name="title" content="Time & Date Tools">
+  <meta name="description" content="Time and date conversion tools. Unix timestamp converter, timezone calculator, and time utilities for developers.">
+  <meta name="keywords" content="time converter, unix timestamp, timezone calculator, date tools, time tools, developer utilities">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/time/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/time/">
+  <meta property="og:title" content="Time & Date Tools">
+  <meta property="og:description" content="Time and date conversion tools for developers.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/time/">
+  <meta property="twitter:title" content="Time & Date Tools">
+  <meta property="twitter:description" content="Time conversion and timezone utilities.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon: "Icon made by mynamepong from www.flaticon.com" -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Time & Date Tools",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Time and date conversion tools including Unix timestamp converter and timezone calculator",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Time conversion, Unix timestamp, Timezone calculator, Date utilities"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <!-- Use css/rtl_style.css for RTL version -->
+  <link href="../css/style.css" rel="stylesheet">
+  <!-- The Project's Typography CSS file, includes used fonts -->
+  <!-- Used font for body: Open Sans -->
+  <!-- Used font for headings: Lato -->
+  <!-- Use css/rtl_typography-scheme-3.css for RTL version -->
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+</head>
+
+<!-- body classes:  -->
+<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+<!-- "gradient-background-header": applies gradient background to header -->
+<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header start -->
+      <!-- classes:  -->
+      <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+      <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+      <!-- "centered": mandatory class for the centered logo layout -->
+      <!-- ================ -->
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <!-- header-first start -->
+              <!-- ================ -->
+              <div class="header-first clearfix">
+
+                <!-- logo and areas -->
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+              <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-8 ml-auto">
+
+            </div>
+            <div class="col-auto hidden-md-down">
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+    </div>
+
+    <div id="page-start"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="section clearfix text-center">
+      <p class="text-center text-muted">
+      <h1 class="mt-10">Time - World Clock
+
+      </h1>
+      </p>
+      <div class="separator-2"></div>
+
+      <div class="container-fluid">
+        <div class="col align-items-center">
+          <div class="row-6">
+            <p class="text-center text-muted">
+            <h2>Brazil</h2><br></p>
+            <div>
+              <iframe src="https://relogio.ntp.br/horacerta/glight.php" style="height:260px;width:380px;"></iframe>
+            </div>
+          </div>
+          <div class="row-5">
+            <p class="text-center text-muted">
+            <h2>UTC</h2><br></p>
+            <script async defer id='202222016727259'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=202222016727259&theme=Digital&action=clock24&wtsid=UTC&hex=ff9900&city=UTC&size=small'></script>
+          </div>
+          <div class="row-5">
+            <p class="text-center text-muted">
+            <h2>World - Ahead of Brazil</h2><br></p>
+            <script async defer id='20201226185648736'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201226185648736&theme=Digital&action=clock24&wtsid=GB&hex=ff9900&city=London&size=small'></script>
+            <script async defer id='2022117181152101'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022117181152101&theme=Digital&action=clock24&wtsid=PT&hex=ff9900&city=Lisbon&size=small'></script>
+            <script async defer id='20201226183428239'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201226183428239&theme=Digital&action=clock24&wtsid=FR&hex=008fff&city=Paris&size=large'></script>
+            <script async defer id='20201226184535392'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=20201226184535392&theme=Digital&action=clock24&wtsid=RU-MOW&hex=ff9900&city=Moscow&size=small'></script>
+            <script async defer id='2022117181621104'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022117181621104&theme=Digital&action=clock24&wtsid=AU-ACT&hex=ff9900&city=Canberra&size=small'></script>
+          </div>
+          <div class="row-5">
+            <p class="text-center text-muted">
+            <h2>World - Behind Brazil</h2><br></p>
+            <script async defer id='2022714104850467'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022714104850467&theme=Digital&action=clock24&wtsid=US-NY&hex=ff9900&city=New York&size=small'></script>
+            <script async defer id='202218195338446'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=202218195338446&theme=Digital&action=clock24&wtsid=US-IL&hex=ff9900&city=Chicago&size=small'></script>
+            <script async defer id='2022117182649326'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022117182649326&theme=Digital&action=clock24&wtsid=US-AZ&hex=ff9900&city=Phoenix&size=small'></script>
+            <script async defer id='2022117182728566'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022117182728566&theme=Digital&action=clock24&wtsid=US-CA&hex=ff9900&city=Los Angeles&size=small'></script>
+            <script async defer id='2022117182754131'
+              src='https://widgets.worldtimeserver.com/Public.ashx?rid=2022117182754131&theme=Digital&action=clock24&wtsid=US-AK&hex=ff9900&city=Anchorage&size=small'></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+    <!-- ================ -->
+    <footer id="footer" class="clearfix dark">
+
+      <!-- .footer start -->
+      <!-- ================ -->
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com
+                    </li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .footer end -->
+    </footer>
+    <!-- footer end -->
+  </div>
+  <!-- page-wrapper end -->
+
+
+  <!-- JavaScript files placed at the end of the document so the pages load faster -->
+  <!-- ================================================== -->
+  <!-- Jquery and Bootstap core js files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Isotope javascript -->
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <!-- Magnific Popup javascript -->
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Appear javascript -->
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <!-- Count To javascript -->
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <!-- Slick carousel javascript -->
+  <script src="../plugins/slick/slick.min.js"></script>
+  <!-- Initialization of Plugins -->
+  <script src="../js/template.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../js/custom.js"></script>
+  <!-- Meursault Library -->
+  <script src="../js/meursault.js"></script>
+</body>
+
+</html>

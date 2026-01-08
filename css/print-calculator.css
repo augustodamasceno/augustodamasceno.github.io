@@ -1,0 +1,180 @@
+/*!
+ * Print Calculator CSS for augustodamasceno.org
+ * Modern styling for the photography print quality calculator
+ */
+
+.calculator-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 700px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.form-group-modern {
+  margin-bottom: 25px;
+}
+
+.form-group-modern label {
+  display: block;
+  font-weight: 600;
+  color: #394245;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group-modern input[type="text"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.form-group-modern input[type="text"]:focus {
+  outline: none;
+  border-color: #09afdf;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(9, 175, 223, 0.1);
+}
+
+.btn-calculate {
+  background: linear-gradient(135deg, #09afdf 0%, #0c9ec7 100%);
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(9, 175, 223, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-calculate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(9, 175, 223, 0.4);
+  background: linear-gradient(135deg, #0c9ec7 0%, #09afdf 100%);
+}
+
+.btn-calculate:active {
+  transform: translateY(0);
+}
+
+.result-box {
+  margin-top: 30px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border-left: 5px solid #09afdf;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-box input[type="text"] {
+  font-size: 42px;
+  font-weight: 700;
+  color: #09afdf;
+  text-align: center;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+}
+
+.result-box input[type="text"]:focus {
+  outline: none;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #394245 0%, #2e3537 100%);
+  padding: 80px 0 60px;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.info-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h3 {
+  color: #394245;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.info-section .info-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.info-section .info-item:last-child {
+  border-bottom: none;
+}
+
+.info-section .info-item i {
+  color: #09afdf;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.input-unit {
+  color: #6c757d;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-card {
+    padding: 25px;
+    margin: 20px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+
+  .result-box input[type="text"] {
+    font-size: 32px;
+  }
+}

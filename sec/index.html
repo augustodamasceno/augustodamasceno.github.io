@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Security Tools & Resources | Augusto Damasceno</title>
+  <meta name="title" content="Security Tools & Resources">
+  <meta name="description" content="Security tools and cryptography resources. Tools for secure development and information security.">
+  <meta name="keywords" content="security tools, cryptography, infosec, cybersecurity, encryption tools, security resources">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/sec/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/sec/">
+  <meta property="og:title" content="Security Tools & Resources">
+  <meta property="og:description" content="Security and cryptography tools.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/sec/">
+  <meta property="twitter:title" content="Security Tools & Resources">
+  <meta property="twitter:description" content="Security and encryption tools.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon: "Icon made by mynamepong from www.flaticon.com" -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Security Tools & Resources",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Security tools and cryptography resources for secure development and information security",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Security tools, Cryptography utilities, Encryption resources"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <!-- Use css/rtl_style.css for RTL version -->
+  <link href="../css/style.css" rel="stylesheet">
+  <!-- The Project's Typography CSS file, includes used fonts -->
+  <!-- Used font for body: Open Sans -->
+  <!-- Used font for headings: Lato -->
+  <!-- Use css/rtl_typography-scheme-3.css for RTL version -->
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+</head>
+
+<!-- body classes:  -->
+<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+<!-- "gradient-background-header": applies gradient background to header -->
+<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+
+
+      <!-- header start -->
+      <!-- classes:  -->
+      <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+      <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+      <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+      <!-- "centered": mandatory class for the centered logo layout -->
+      <!-- ================ -->
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <!-- header-first start -->
+              <!-- ================ -->
+              <div class="header-first clearfix">
+
+                <!-- logo and areas -->
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+              <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-8 ml-auto">
+
+            </div>
+            <div class="col-auto hidden-md-down">
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+    </div>
+
+    <div id="page-start"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="section clearfix text-center">
+      <p class="text-center text-muted">
+      <h1 class="mt-10">Softwares and projects recommended for your security and privacy</h1>
+      </p>
+    </section>
+    <br>
+    <section class="section clearfix">
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://www.gnome.org/"><br><img src="../img/gnomeshell.webp" alt="Gnome Shell"
+                  style="vertical-align:top;margin:20px 20px 20px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Gnome Shell</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>BSD and GNU/Linux Operating Systems</h3>
+              <div class="separator-2"></div>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-external-link"></i></span><a
+                    href="https://www.freebsd.org/about.html">FreeBSD</a></li>
+                <li><span class="fa-li"><i class="fa fa-external-link"></i></span><a href="https://www.gnu.org/">GNU</a>
+                </li>
+                <li><span class="fa-li"><i class="fa fa-external-link"></i></span><a href="https://www.kernel.org/">The
+                    Linux Kernel</a></li>
+                <li><span class="fa-li"><i class="fa fa-external-link"></i></span><a
+                    href="https://distrowatch.com/">Search OS and Distros Here!</a></li>
+                <li><span class="fa-li"><i class="fa fa-heart"></i></span>Some nice options</li>
+                <br>
+                <div id="banner">
+                  <div style="display: inline-block">
+                    <a href="https://www.freebsd.org/where.html"><img alt="FreeBSD" style="border-width:30"
+                        src="../img/freebsd.png" height="50" width="50" /></a>
+                  </div>
+                  <div style="display: inline-block">
+                    <a href="https://www.archlinux.org/"><img alt="Arch Linux" style="border-width:30"
+                        src="../img/arch.png" height="50" width="50" /></a>
+                  </div>
+                  <div style="display: inline-block">
+                    <a href="https://www.debian.org/distrib/"><img alt="Debian" style="border-width:30"
+                        src="../img/debian.png" height="50" width="50" /> </a>
+                  </div>
+                  <div style="display: inline-block">
+                    <a href="https://getfedora.org/"><img alt="Fedora" style="border-width:30" src="../img/fedora.png"
+                        height="50" width="50" /> </a>
+                  </div>
+                </div>
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://whispersystems.org/"><img src="../img/signal.png" height="300" width="300" alt="signal"
+                  style="vertical-align:middle;margin:0px 200px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Signal Private Messenger</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Signal Private Messenger</h3>
+              <div class="separator-2"></div>
+              <p align="justify">Using Signal, you can communicate instantly while avoiding SMS fees, create groups so
+                that
+                you can chat in real time with all your friends at once, and share media or attachments all with
+                complete privacy.
+                The server never has access to any of your communication and never stores any of your data.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://telegram.org/"><img src="../img/telegram.png" height="256" width="256" alt="Telegram"
+                  style="vertical-align:middle;margin:0px 200px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Telegram</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Telegram</h3>
+              <div class="separator-2"></div>
+              <br>
+              <p align="justify">Telegram is a cloud-based mobile and
+                desktop messaging app with a focus on security and speed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br><br>
+              <a href="https://www.torproject.org/index.html.en"><img src="../img/tor-logo.jpg" height="280" width="280"
+                  alt="Tor" style="vertical-align:middle;margin:0px 200px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Tor</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Tor</h3>
+              <div class="separator-2"></div>
+              <p><br>Tor is free software and an open network that helps you defend against traffic analysis,
+              <p align="justify">Tor is free software and an open network that helps you defend against traffic
+                analysis,
+                a form of network surveillance that threatens personal freedom and privacy, confidential business
+                activities and relationships, and state securit.</p>
+              </span><a href=""></a>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-external-link"></i>
+                  </span><a href="https://guardianproject.info/apps/orbot/">Orbot: Tor for Android</a>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://duckduckgo.com/"><img src="../img/DDG.png" height="220" width="220" alt="DuckDuckGo"
+                  style="vertical-align:middle;margin:0px 230px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">DuckDuckGo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>DuckDuckGo</h3>
+              <div class="separator-2"></div>
+              <p>The search engine that doesn't track you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://www.eff.org/https-everywhere"><img src="../img/https-everywhere.png" height="320"
+                  width="320" alt="HTTPS Everywhere" style="vertical-align:middle;margin:0px 200px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">HTTPS Everywhere</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>HTTPS Everywhere</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                HTTPS Everywhere is a Firefox, Chrome, and Opera extension that encrypts your
+                communications with many major websites, making your browsing more secure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <a href="https://noscript.net/"><img src="../img/noscript.png" height="256" width="256" alt="NoScript"
+                  style="vertical-align:middle;margin:0px 230px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">NoScript</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>NoScript</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                The NoScript Firefox extension provides extra protection for Firefox, Seamonkey and other
+                mozilla-based browsers: this free, open source add-on allows JavaScript, Java, Flash and
+                other plugins to be executed only by trusted web sites of your choice (e.g. your online bank).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br><br>
+              <a href="https://tails.boum.org/"><img src="../img/tails.png" height="113" width="610" alt="Tails"
+                  style="vertical-align:middle;margin:0px 30px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Tails - The Amnesic Incognito Live System</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Tails - The Amnesic Incognito Live System</h3>
+              <div class="separator-2"></div>
+              <p>Tails is a live operating system that you can start on almost any computer from a DVD, USB stick, or SD
+                card.
+              <p>
+                <br>
+                It aims at preserving your privacy and anonymity, and helps you to:
+              <p align="justify">Tails is a live operating system that you can start on almost any computer from a DVD,
+                USB stick, or SD card.
+                <br>
+                It aims at preserving your privacy and anonymity, and helps you to:
+              </p>
+              <br>
+              <ul>
+                <li>use the Internet anonymously and circumvent censorship;
+                  all connections to the Internet are forced to go through the Tor network;</li>
+                <li>leave no trace on the computer you are using unless you ask it explicitly;</li>
+                <li>use state-of-the-art cryptographic tools to encrypt your files, emails and instant messaging.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://www.kali.org/"><img src="../img/kali.png" height="240" width="576" alt="Kali Linux"
+                  style="vertical-align:middle;margin:10px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Kali Linux</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Kali Linux</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                Kali Linux is an open source project that is maintained
+                and funded by Offensive Security, a provider of world-class
+                information security training and penetration testing services.
+                Kali Linux offers ready-to-use virtual machine images for VirtualBox, VMware, and other platforms,
+                making it easy to get started with security testing without installation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://www.ghostbsd.org/"><img src="../img/GhostBSD.jpg" height="240" width="576"
+                  alt="GhostBSD" style="vertical-align:middle;margin:10px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">GhostBSD</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>GhostBSD</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                GhostBSD is a simple, elegant desktop BSD operating system based on FreeBSD.
+                It provides a modern MATE desktop environment with a user-friendly graphical installer,
+                automatic hardware detection, and pre-configured tools. GhostBSD combines the power
+                and stability of FreeBSD with ease of use, making it ideal for both newcomers and
+                experienced users seeking a secure and reliable desktop BSD system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://www.virtualbox.org/"><img src="../img/Fedora_21_on_OSX.png" height="240" width="576"
+                  alt="VirtualBox" style="vertical-align:middle;margin:0px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">VirtualBox 5.0 for Mac OS X. Within VirtualBox Fedora 21 is running.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>VirtualBox</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted
+                at server, desktop and embedded use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://openvpn.net/"><img src="../img/openvpn.gif" height="350" width="500" alt="OpenVPN"
+                  style="vertical-align:middle;margin:0px 75px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">OpenVPN</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>OpenVPN</h3>
+              <div class="separator-2"></div>
+              <p>With OpenVPN, you can:</p>
+              <br>
+              <ul>
+                <li>tunnel any IP subnetwork or virtual ethernet adapter over a single UDP or TCP port,</li>
+                <li>configure a scalable, load-balanced VPN server farm using one or more machines which can handle
+                  thousands of dynamic connections from incoming VPN clients,</li>
+                <li>use all of the encryption, authentication, and certification features of the OpenSSL library to
+                  protect your private network traffic as it transits the internet,</li>
+                <li>use any cipher, key size, or HMAC digest (for datagram integrity checking) supported by the OpenSSL
+                  library,
+                <li>
+                <li>choose between static-key based conventional encryption or certificate-based public key encryption,
+                </li>
+                <li>use static, pre-shared keys or TLS-based dynamic key exchange,</li>
+                <li>use real-time adaptive link compression and traffic-shaping to manage link bandwidth utilization,
+                </li>
+                <li>tunnel networks whose public endpoints are dynamic such as DHCP or dial-in clients,</li>
+                <li>tunnel networks through connection-oriented stateful firewalls without having to use explicit
+                  firewall rules,</li>
+                <li>tunnel networks over NAT,</li>
+                <li>create secure ethernet bridges using virtual tap devices, and</li>
+                <li>control OpenVPN using a GUI on Windows or Mac OS X.</li>
+              </ul>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://gnupg.org/"><img src="../img/gnupg.png" height="240" width="576"
+                  alt="GnuPG" style="vertical-align:middle;margin:10px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">GnuPG - GNU Privacy Guard</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>GnuPG</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                GnuPG (GNU Privacy Guard) is a complete and free implementation of the OpenPGP standard.
+                It allows you to encrypt and sign your data and communications, featuring a versatile key management
+                system and access modules for public key directories. GnuPG is a command-line tool with features
+                for easy integration with other applications, providing strong encryption for email, files, and
+                digital signatures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://www.wireshark.org/"><img src="../img/wireshark.png" height="120" width="288"
+                  alt="Wireshark" style="vertical-align:middle;margin:10px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Wireshark Network Protocol Analyzer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Wireshark</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                Wireshark is the world's foremost and widely-used network protocol analyzer. It lets you see
+                what's happening on your network at a microscopic level and is the de facto standard across
+                many commercial and non-profit enterprises, government agencies, and educational institutions.
+                Wireshark provides deep inspection of hundreds of protocols, live capture and offline analysis,
+                and powerful display filters for network troubleshooting and security analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://www.pfsense.org/"><img src="../img/pfsense.svg" height="240" width="576"
+                  alt="pfSense" style="vertical-align:middle;margin:10px 50px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">pfSense Firewall</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>pfSense</h3>
+              <div class="separator-2"></div>
+              <p align="justify">
+                pfSense is a free and open source firewall and router platform based on FreeBSD.
+                It is a powerful, flexible, and feature-rich network security solution that can be configured
+                as a firewall, router, VPN endpoint, DHCP server, DNS server, and more. pfSense is used by
+                small businesses, large enterprises, and service providers worldwide to secure their networks
+                with enterprise-grade features at no cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="https://wikileaks.org/"><img src="../img/wikileaks.png" height="350" width="500" alt="WikiLeaks"
+                  style="vertical-align:middle;margin:0px 90px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">WikiLeaks</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>WikiLeaks</h3>
+              <div class="separator-2"></div>
+              <p align="justify">WikiLeaks is a multi-national media organization and associated library. It was founded
+                by its publisher Julian Assange in 2006.
+                <br><br>
+                WikiLeaks specializes in the analysis and publication of large datasets of censored or otherwise
+                restricted official materials
+                involving war, spying and corruption. It has so far published more than 10 million documents and
+                associated analyses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="image-box style-4 light-gray-bg">
+        <div class="row grid-space-0">
+          <div class="col-lg-6">
+            <div class="overlay-container">
+              <br><br>
+              <a href="http://sectools.org/"><img src="../img/sectools.png" height="350" width="350"
+                  alt="Top 125 Network Security Tools" style="vertical-align:middle;margin:0px 160px"></a>
+              <div class="overlay-to-top">
+                <p class="small margin-clear">Top 125 Network Security Tools</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="body">
+              <div class="pv-30 hidden-lg-down"></div>
+              <h3>Top 125 Network Security Tools</h3>
+              <div class="separator-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main end -->
+
+    </section>
+    <!-- main-container end -->
+
+    <!-- section end -->
+
+    <!-- section start -->
+    <!-- ================ -->
+    <section class="light-gray-bg pv-20">
+    </section>
+    <!-- section end -->
+
+    <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+    <!-- ================ -->
+    <footer id="footer" class="clearfix dark">
+
+      <!-- .footer start -->
+      <!-- ================ -->
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com
+                    </li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .footer end -->
+    </footer>
+    <!-- footer end -->
+  </div>
+  <!-- page-wrapper end -->
+
+
+  <!-- JavaScript files placed at the end of the document so the pages load faster -->
+  <!-- ================================================== -->
+  <!-- Jquery and Bootstap core js files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Isotope javascript -->
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <!-- Magnific Popup javascript -->
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Appear javascript -->
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <!-- Count To javascript -->
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <!-- Slick carousel javascript -->
+  <script src="../plugins/slick/slick.min.js"></script>
+  <!-- Initialization of Plugins -->
+  <script src="../js/template.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../js/custom.js"></script>
+  <!-- Meursault Library -->
+  <script src="../js/meursault.js"></script>
+</body>
+
+</html>

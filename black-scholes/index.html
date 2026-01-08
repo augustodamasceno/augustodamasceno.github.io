@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Black-Scholes Options Calculator - Greeks & Analysis | Augusto Damasceno</title>
+  <meta name="title" content="Black-Scholes Options Calculator - Greeks & Analysis">
+  <meta name="description" content="Free Black-Scholes calculator for options pricing with all Greeks (Delta, Gamma, Theta, Vega, Rho). Interactive charts, real-time calculations for traders and analysts.">
+  <meta name="keywords" content="black-scholes, options pricing, greeks calculator, delta, gamma, theta, vega, options trading, quantitative finance, financial calculator">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/black-scholes/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/black-scholes/">
+  <meta property="og:title" content="Black-Scholes Options Calculator with Greeks">
+  <meta property="og:description" content="Calculate option prices and Greeks with interactive charts. Free tool for options traders and financial analysts.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://augustodamasceno.org/black-scholes/">
+  <meta property="twitter:title" content="Black-Scholes Options Calculator with Greeks">
+  <meta property="twitter:description" content="Calculate option prices and Greeks with interactive charts. Free tool for options traders.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Black-Scholes Options Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Options pricing calculator using Black-Scholes model with Greeks (Delta, Gamma, Theta, Vega, Rho) and interactive charts",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Options pricing, Greeks calculation, Interactive charts, Real-time analysis"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- Black-Scholes CSS -->
+  <link href="../css/black-scholes.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="../plugins/charts/Chart.min.js"></script>
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <div class="header-first clearfix">
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto"></div>
+            <div class="col-auto hidden-md-down"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+          
+          <!-- main start -->
+          <div class="main col-12">
+
+            <!-- Page title start -->
+            <div class="page-title">
+              <h1 class="title">Black-Scholes Options Pricing Calculator</h1>
+              <div class="separator-2"></div>
+            </div>
+            <!-- Page title end -->
+
+            <div class="row">
+              <div class="col-lg-12">
+                
+                <!-- Black-Scholes Calculator -->
+                <div class="bs-calculator-container">
+                  
+                  <!-- Input Parameters -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-sliders-h"></i> Option Parameters
+                      </h4>
+
+                      <div class="row">
+                        <!-- Stock Price -->
+                        <div class="col-md-4 mb-3">
+                          <label for="stockPriceInput" class="form-label">
+                            <strong>Stock Price (S):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="stockPriceInput" 
+                                 value="100" 
+                                 step="0.01"
+                                 min="0.01">
+                          <small class="form-text text-muted">Current stock price</small>
+                        </div>
+
+                        <!-- Strike Price -->
+                        <div class="col-md-4 mb-3">
+                          <label for="strikePriceInput" class="form-label">
+                            <strong>Strike Price (K):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="strikePriceInput" 
+                                 value="100" 
+                                 step="0.01"
+                                 min="0.01">
+                          <small class="form-text text-muted">Exercise price</small>
+                        </div>
+
+                        <!-- Time to Expiration -->
+                        <div class="col-md-4 mb-3">
+                          <label for="timeInput" class="form-label">
+                            <strong>Time to Expiration (T):</strong>
+                          </label>
+                          <div class="input-group">
+                            <input type="number" 
+                                   class="form-control" 
+                                   id="timeInput" 
+                                   value="1" 
+                                   step="0.01"
+                                   min="0.01">
+                            <select class="form-control" id="timeUnitSelect" style="max-width: 100px;">
+                              <option value="days">Days</option>
+                              <option value="years" selected>Years</option>
+                            </select>
+                          </div>
+                          <small class="form-text text-muted">
+                            Time until expiration (<span id="timeDisplay">365 days</span>)
+                          </small>
+                        </div>
+
+                        <!-- Risk-Free Rate -->
+                        <div class="col-md-4 mb-3">
+                          <label for="rateInput" class="form-label">
+                            <strong>Risk-Free Rate (r):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="rateInput" 
+                                 value="5" 
+                                 step="0.1"
+                                 min="0">
+                          <small class="form-text text-muted">Percentage (e.g., 5 for 5%)</small>
+                        </div>
+
+                        <!-- Volatility -->
+                        <div class="col-md-4 mb-3">
+                          <label for="volatilityInput" class="form-label">
+                            <strong>Volatility (σ):</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control" 
+                                 id="volatilityInput" 
+                                 value="20" 
+                                 step="0.1"
+                                 min="0.1">
+                          <small class="form-text text-muted">Percentage (e.g., 20 for 20%)</small>
+                        </div>
+
+                        <!-- Option Type -->
+                        <div class="col-md-4 mb-3">
+                          <label for="optionTypeSelect" class="form-label">
+                            <strong>Option Type:</strong>
+                          </label>
+                          <select class="form-control" id="optionTypeSelect">
+                            <option value="call">Call Option</option>
+                            <option value="put">Put Option</option>
+                          </select>
+                          <small class="form-text text-muted">Call or Put</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Results Display -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-calculator"></i> Calculated Results
+                      </h4>
+
+                      <div class="row">
+                        <!-- Option Price -->
+                        <div class="col-md-6 mb-3">
+                          <div class="result-box">
+                            <h5 class="text-primary">Option Price</h5>
+                            <h2 class="display-4 text-center" id="optionPrice">$0.00</h2>
+                            <p class="text-center text-muted">Theoretical value</p>
+                          </div>
+                        </div>
+
+                        <!-- Intrinsic Value -->
+                        <div class="col-md-6 mb-3">
+                          <div class="result-box">
+                            <h5 class="text-secondary">Intrinsic Value</h5>
+                            <h2 class="display-4 text-center" id="intrinsicValue">$0.00</h2>
+                            <p class="text-center text-muted">
+                              Time Value: <strong id="timeValue">$0.00</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Greeks -->
+                      <h5 class="mt-4 mb-3">Option Greeks</h5>
+                      <div class="row">
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="Call: Δ = N(d₁) | Put: Δ = N(d₁) - 1">
+                            <small class="text-muted">Delta (Δ)</small>
+                            <h4 id="deltaValue">0.0000</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="Γ = N'(d₁) / (S × σ × √T)">
+                            <small class="text-muted">Gamma (Γ)</small>
+                            <h4 id="gammaValue">0.0000</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="Θ = -S×N'(d₁)×σ/(2√T) ± rKe^(-rT)×N(±d₂) (per day)">
+                            <small class="text-muted">Theta (Θ)</small>
+                            <h4 id="thetaValue">0.0000</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="ν = S × N'(d₁) × √T / 100">
+                            <small class="text-muted">Vega (ν)</small>
+                            <h4 id="vegaValue">0.0000</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="Call: ρ = KTe^(-rT)×N(d₂)/100 | Put: ρ = -KTe^(-rT)×N(-d₂)/100">
+                            <small class="text-muted">Rho (ρ)</small>
+                            <h4 id="rhoValue">0.0000</h4>
+                          </div>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                          <div class="greek-box" data-toggle="tooltip" title="d₁ = [ln(S/K) + (r + σ²/2)T] / (σ√T)">
+                            <small class="text-muted">d₁</small>
+                            <h4 id="d1Value">0.0000</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Visualization -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="card-title mb-0">
+                          <i class="fas fa-chart-area"></i> Price Visualization
+                        </h4>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-primary" onclick="changeChart('stock')">vs Stock Price</button>
+                          <button type="button" class="btn btn-sm btn-outline-primary" onclick="changeChart('time')">vs Time</button>
+                          <button type="button" class="btn btn-sm btn-outline-primary" onclick="changeChart('volatility')">vs Volatility</button>
+                        </div>
+                      </div>
+                      <div class="chart-container">
+                        <canvas id="bsChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Black-Scholes Calculator end -->
+
+              </div>
+            </div>
+
+          </div>
+          <!-- main end -->
+
+        </div>
+      </div>
+
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/meursault.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../js/black-scholes.js"></script>
+
+</body>
+
+</html>

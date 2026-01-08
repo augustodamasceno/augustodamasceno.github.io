@@ -1,0 +1,9 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow specific directories if needed
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://augustodamasceno.org/sitemap.xml

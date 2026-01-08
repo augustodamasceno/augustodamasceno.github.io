@@ -1,0 +1,317 @@
+/*!
+ * Homepage Modern Styles for augustodamasceno.org
+ * Enhanced styling for the main landing page
+ */
+
+/* Slideshow Height Adjustment */
+.banner,
+.hc-slideshow,
+.carousel-inner,
+.carousel-item,
+.fullscreen-slide,
+.background-image {
+  height: 70vh !important;
+  min-height: 500px !important;
+}
+
+.hc-slideshow--fullscreen {
+  height: 70vh !important;
+  min-height: 500px !important;
+}
+
+/* Hero Section Enhancements */
+.hc-slideshow-caption h1 {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+.hc-slideshow-caption h2 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  font-weight: 500 !important;
+  line-height: 1.6;
+}
+
+/* Service Cards Modern Design */
+.hc-item-box {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 40px 20px !important;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: visible;
+}
+
+.hc-item-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #09afdf 0%, #0c9ec7 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.hc-item-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(9, 175, 223, 0.15);
+}
+
+.hc-item-box:hover::before {
+  transform: scaleX(1);
+}
+
+.hc-item-box h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #394245;
+  transition: color 0.3s ease;
+}
+
+.hc-item-box:hover h3 {
+  color: #09afdf;
+}
+
+.hc-item-box .icon {
+  transition: all 0.4s ease;
+}
+
+.hc-item-box:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.hc-item-box .icon.default-bg {
+  background: linear-gradient(135deg, #09afdf 0%, #0c9ec7 100%) !important;
+}
+
+.hc-item-box .icon.dark-bg {
+  background: linear-gradient(135deg, #394245 0%, #2e3537 100%) !important;
+}
+
+/* Alternate gradient colors for main page icons */
+.col-lg-4:nth-child(1) .icon.circle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+.col-lg-4:nth-child(2) .icon.circle {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4) !important;
+}
+
+.col-lg-4:nth-child(3) .icon.circle {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4) !important;
+}
+
+.col-lg-4:nth-child(4) .icon.circle {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+  box-shadow: 0 8px 25px rgba(67, 233, 123, 0.4) !important;
+}
+
+.col-lg-4:nth-child(5) .icon.circle {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+  box-shadow: 0 8px 25px rgba(250, 112, 154, 0.4) !important;
+}
+
+.col-lg-4:nth-child(1) .hc-item-box:hover .icon.circle {
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6) !important;
+}
+
+.col-lg-4:nth-child(2) .hc-item-box:hover .icon.circle {
+  box-shadow: 0 12px 35px rgba(240, 147, 251, 0.6) !important;
+}
+
+.col-lg-4:nth-child(3) .hc-item-box:hover .icon.circle {
+  box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6) !important;
+}
+
+.col-lg-4:nth-child(4) .hc-item-box:hover .icon.circle {
+  box-shadow: 0 12px 35px rgba(67, 233, 123, 0.6) !important;
+}
+
+.col-lg-4:nth-child(5) .hc-item-box:hover .icon.circle {
+  box-shadow: 0 12px 35px rgba(250, 112, 154, 0.6) !important;
+}
+
+.hc-item-box .separator {
+  height: 3px;
+  width: 60px;
+  margin: 15px auto 20px;
+  background: linear-gradient(90deg, #09afdf 0%, #0c9ec7 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.hc-item-box:hover .separator {
+  width: 80px;
+}
+
+.hc-item-box p.text-muted {
+  color: #6c757d !important;
+  font-size: 15px;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.hc-item-box:hover p.text-muted {
+  color: #495057 !important;
+}
+
+/* Service Cards Link Enhancement */
+.hc-item-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section Enhancements */
+section.bg-light {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%) !important;
+  padding: 40px 0 30px !important;
+  margin-bottom: 0 !important;
+}
+
+section.bg-light .container {
+  max-width: 1200px;
+}
+
+section.bg-light .row.py-5 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Footer Modern Style */
+#footer.dark {
+  background: linear-gradient(135deg, #2e3537 0%, #394245 100%);
+  border-top: 3px solid #09afdf;
+}
+
+.footer-content h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.footer-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #09afdf 0%, #0c9ec7 100%);
+  border-radius: 2px;
+}
+
+.footer-content .list-inline-item {
+  font-size: 16px;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.footer-content .list-inline-item:hover {
+  transform: translateX(5px);
+}
+
+.footer-content .list-inline-item i {
+  color: #09afdf;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Scroll to Top Button */
+.scrollToTop {
+  background: linear-gradient(135deg, #09afdf 0%, #0c9ec7 100%);
+  box-shadow: 0 5px 20px rgba(9, 175, 223, 0.4);
+  transition: all 0.3s ease;
+}
+
+.scrollToTop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(9, 175, 223, 0.5);
+}
+
+/* Carousel Controls Enhancement */
+.hc-slideshow .carousel-control {
+  background-color: transparent !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.hc-slideshow .carousel-control:hover {
+  width: auto !important;
+  background-color: transparent !important;
+}
+
+.carousel-control span {
+  font-size: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control:hover span {
+  opacity: 0.8;
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators li.active {
+  width: 14px;
+  height: 14px;
+  background-color: #09afdf;
+  border-color: #09afdf;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hc-item-box {
+    margin-bottom: 25px;
+    padding: 30px 15px !important;
+  }
+  
+  section.bg-light {
+    padding: 40px 0;
+  }
+  
+  .footer-content h2 {
+    font-size: 28px;
+  }
+  
+  .carousel-control span {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hc-item-box {
+    margin-bottom: 30px;
+  }
+}
+
+/* Animation Enhancement */
+@keyframes fadeInUpEnhanced {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hc-element-invisible {
+  animation: fadeInUpEnhanced 0.8s ease forwards;
+}

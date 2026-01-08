@@ -1,0 +1,179 @@
+/* Black-Scholes Calculator CSS */
+/* Augusto Damasceno */
+
+.bs-calculator-container {
+    padding: 20px 0;
+}
+
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-label {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.result-box {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    text-align: center;
+    height: 100%;
+}
+
+.result-box h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.result-box .display-4 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.greek-box {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.greek-box:hover {
+    border-color: #80bdff;
+    box-shadow: 0 2px 8px rgba(0,123,255,.15);
+    transform: translateY(-2px);
+}
+
+.greek-box small {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.greek-box h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn-group .btn {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+    
+    .result-box .display-4 {
+        font-size: 2rem;
+    }
+    
+    .greek-box {
+        margin-bottom: 10px;
+    }
+    
+    .bs-calculator-container {
+        padding: 10px 0;
+    }
+}
+
+/* Animation for value changes */
+@keyframes valueChange {
+    0% { background-color: #fff3cd; }
+    100% { background-color: transparent; }
+}
+
+.form-control:focus {
+    animation: valueChange 0.5s ease;
+}
+
+/* Improve number input appearance */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Positive/Negative value coloring */
+.text-positive {
+    color: #28a745;
+}
+
+.text-negative {
+    color: #dc3545;
+}
+
+/* Loading animation */
+.calculating {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Highlight current option type */
+.form-control:valid {
+    border-color: #28a745;
+}
+
+.form-control:invalid {
+    border-color: #dc3545;
+}

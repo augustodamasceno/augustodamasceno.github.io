@@ -1,0 +1,42 @@
+/*!
+ * File augustodamasceno.css for the website augustodamasceno.org
+ *
+ * Licensed under the  BSD-2-Clause(https://spdx.org/licenses/BSD-2-Clause.html.
+ *
+ * Copyright (c) 2022, Augusto Damasceno.
+ */
+
+ @charset "UTF-8";
+
+/* Desktop and Mobile */
+.ad-center {
+  position: relative;
+  text-align: center;
+}
+
+/* Desktop */
+.spanspace-20{
+    display:inline-block;
+    width: 20%;
+}
+.spanspace-15{
+  display:inline-block;
+  width: 15%;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  [class*="vertical-up-15"] {
+    top: 15px;
+  }
+  [class*="vertical-up-50"] {
+    top: 50px;
+  }
+  [class*="spanspace-"] {
+    display:inline-block;
+    width: 0%;
+  }
+  [class*="h1"] {
+    font-size:5px;
+  }
+}

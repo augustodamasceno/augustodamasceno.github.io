@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>IEEE 754 Floating-Point Converter | Augusto Damasceno</title>
+  <meta name="title" content="IEEE 754 Floating-Point Converter">
+  <meta name="description" content="Convert between decimal and IEEE 754 binary floating-point formats. Support for single and double precision. Free online tool for programmers and engineers.">
+  <meta name="keywords" content="IEEE 754, floating point, binary converter, single precision, double precision, float converter, programming tools">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/ieee754/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/ieee754/">
+  <meta property="og:title" content="IEEE 754 Floating-Point Converter">
+  <meta property="og:description" content="Convert between decimal and IEEE 754 binary formats. Free online tool.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/ieee754/">
+  <meta property="twitter:title" content="IEEE 754 Floating-Point Converter">
+  <meta property="twitter:description" content="Convert between decimal and IEEE 754 binary formats.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "IEEE 754 Floating-Point Converter",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Convert between decimal and IEEE 754 binary floating-point formats with support for single and double precision",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "IEEE 754 conversion, Single precision, Double precision, Binary representation"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- IEEE 754 Converter CSS -->
+  <link href="../css/ieee754-converter.css" rel="stylesheet">
+
+  <script src="../js/ieee754-converter.js"></script>
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto hidden-md-down">
+              <div class="header-first clearfix">
+                <ul class="list-inline hidden-md-down">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto"></div>
+            <div class="col-auto hidden-md-down"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="page-start"></div>
+
+    <!-- section start -->
+    <section class="ieee754-section">
+      <div class="ieee754-container">
+        <div class="ieee754-card">
+          <h1><i class="fas fa-calculator"></i> IEEE 754 Floating-Point Converter</h1>
+          <p class="subtitle">Convert decimal numbers to IEEE 754 binary representation</p>
+          
+          <div class="converter-grid">
+            <!-- Input Section -->
+            <div class="input-section">
+              <div class="input-group-ieee">
+                <label for="decimal-input"><i class="fas fa-keyboard"></i> Decimal Number</label>
+                <input type="number" id="decimal-input" class="ieee-input" placeholder="Enter decimal number (e.g., 3.14159)" step="any">
+              </div>
+              
+              <div class="precision-selector">
+                <label><i class="fas fa-sliders-h"></i> Precision</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="precision" value="32" checked>
+                    <span>Single (32-bit)</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="precision" value="64">
+                    <span>Double (64-bit)</span>
+                  </label>
+                </div>
+              </div>
+              
+              <button class="btn-convert" onclick="convertToIEEE754()">
+                <i class="fas fa-exchange-alt"></i> Convert
+              </button>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="results-section">
+              <div class="result-item">
+                <label><i class="fas fa-binary"></i> Binary Representation</label>
+                <div class="result-display" id="binary-result">-</div>
+              </div>
+              
+              <div class="result-item">
+                <label><i class="fas fa-hashtag"></i> Hexadecimal</label>
+                <div class="result-display" id="hex-result">-</div>
+              </div>
+              
+              <div class="result-item">
+                <label><i class="fas fa-layer-group"></i> Bit Breakdown</label>
+                <div class="bit-breakdown" id="bit-breakdown">
+                  <div class="bit-part sign">
+                    <span class="bit-label">Sign</span>
+                    <span class="bit-value" id="sign-bit">-</span>
+                  </div>
+                  <div class="bit-part exponent">
+                    <span class="bit-label">Exponent</span>
+                    <span class="bit-value" id="exponent-bits">-</span>
+                  </div>
+                  <div class="bit-part mantissa">
+                    <span class="bit-label">Mantissa</span>
+                    <span class="bit-value" id="mantissa-bits">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step-by-Step Calculation -->
+          <div class="steps-section" id="steps-section" style="display:none;">
+            <h3><i class="fas fa-list-ol"></i> Step-by-Step Calculation</h3>
+            <div id="calculation-steps" class="steps-container"></div>
+          </div>
+        </div>
+        
+        <!-- Explanation Section -->
+        <div class="explanation-card">
+          <h2><i class="fas fa-book"></i> How IEEE 754 Works</h2>
+          <div class="explanation-content">
+            <p>
+              <strong>IEEE 754</strong> is a technical standard for floating-point arithmetic established by the 
+              Institute of Electrical and Electronics Engineers (IEEE). It defines how computers represent and 
+              manipulate decimal numbers in binary format.
+            </p>
+            
+            <h4>Structure</h4>
+            <p>
+              IEEE 754 floating-point numbers are divided into three parts:
+            </p>
+            
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-icon sign-color">
+                  <i class="fas fa-plus-minus"></i>
+                </div>
+                <h5>Sign Bit</h5>
+                <p>1 bit determining if the number is positive (0) or negative (1)</p>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon exponent-color">
+                  <i class="fas fa-superscript"></i>
+                </div>
+                <h5>Exponent</h5>
+                <p>8 bits (single) or 11 bits (double) for the power of 2, using biased representation</p>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon mantissa-color">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <h5>Mantissa (Fraction)</h5>
+                <p>23 bits (single) or 52 bits (double) for the significant digits</p>
+              </div>
+            </div>
+            
+            <h4>Formula</h4>
+            <div class="formula-box">
+              <p>Value = (-1)<sup>sign</sup> × 2<sup>(exponent - bias)</sup> × (1 + mantissa)</p>
+            </div>
+            
+            <ul class="explanation-list">
+              <li><strong>Bias:</strong> 127 for single precision (32-bit), 1023 for double precision (64-bit)</li>
+              <li><strong>Single Precision:</strong> 1 sign bit + 8 exponent bits + 23 mantissa bits = 32 bits</li>
+              <li><strong>Double Precision:</strong> 1 sign bit + 11 exponent bits + 52 mantissa bits = 64 bits</li>
+              <li><strong>Range:</strong> Single precision: ±1.18×10<sup>-38</sup> to ±3.4×10<sup>38</sup></li>
+              <li><strong>Precision:</strong> Single: ~7 decimal digits, Double: ~15-16 decimal digits</li>
+            </ul>
+            
+            <h4>Special Values</h4>
+            <ul class="explanation-list">
+              <li><strong>Zero:</strong> All exponent and mantissa bits are 0</li>
+              <li><strong>Infinity:</strong> All exponent bits are 1, all mantissa bits are 0</li>
+              <li><strong>NaN (Not a Number):</strong> All exponent bits are 1, mantissa is non-zero</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/meursault.js"></script>
+</body>
+
+</html>
