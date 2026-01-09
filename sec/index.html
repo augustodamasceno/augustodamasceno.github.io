@@ -110,7 +110,7 @@
 <!-- "gradient-background-header": applies gradient background to header -->
 <!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
 
-<body class="front-page transparent-header">
+<body class="front-page">
 
   <!-- scrollToTop -->
   <!-- ================ -->
@@ -134,28 +134,28 @@
       <header class="header dark fixed fixed-desktop clearfix">
         <div class="container">
           <div class="row">
-            <div class="col-md-auto hidden-md-down">
+            <div class="col-md-auto">
               <!-- header-first start -->
               <!-- ================ -->
               <div class="header-first clearfix">
 
                 <!-- logo and areas -->
-                <ul class="list-inline hidden-md-down">
+                <ul class="list-inline">
                   <li class="list-inline-item" style="vertical-align:bottom">
                     <div id="logo" class="logo">
                       <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
                     </div>
                   </li>
-                  <li class="list-inline-item" style="vertical-align:bottom">&emsp;</li>
-                  <li class="list-inline-item" style="vertical-align:bottom">
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
                     <i class="fas fa-heart pr-2"></i>
                     Artificial Intelligence
                   </li>
-                  <li class="list-inline-item" style="vertical-align:bottom">
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
                     <i class="fas fa-microchip pr-2"></i>
                     Embedded Systems
                   </li>
-                  <li class="list-inline-item" style="vertical-align:bottom">
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
                     <i class="fas fa-chart-line pr-2"></i>
                     Quantitative Trading
                   </li>
@@ -194,7 +194,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://www.gnome.org/"><br><img src="../img/gnomeshell.webp" alt="Gnome Shell"
-                  style="vertical-align:top;margin:20px 20px 20px 50px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:20px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Gnome Shell</p>
               </div>
@@ -246,7 +246,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://whispersystems.org/"><img src="../img/signal.png" height="300" width="300" alt="signal"
-                  style="vertical-align:middle;margin:0px 200px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Signal Private Messenger</p>
               </div>
@@ -274,7 +274,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://telegram.org/"><img src="../img/telegram.png" height="256" width="256" alt="Telegram"
-                  style="vertical-align:middle;margin:0px 200px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Telegram</p>
               </div>
@@ -300,7 +300,7 @@
             <div class="overlay-container">
               <br><br><br>
               <a href="https://www.torproject.org/index.html.en"><img src="../img/tor-logo.jpg" height="280" width="280"
-                  alt="Tor" style="vertical-align:middle;margin:0px 200px"></a>
+                  alt="Tor" style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Tor</p>
               </div>
@@ -335,7 +335,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://duckduckgo.com/"><img src="../img/DDG.png" height="220" width="220" alt="DuckDuckGo"
-                  style="vertical-align:middle;margin:0px 230px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">DuckDuckGo</p>
               </div>
@@ -357,7 +357,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://www.eff.org/https-everywhere"><img src="../img/https-everywhere.png" height="320"
-                  width="320" alt="HTTPS Everywhere" style="vertical-align:middle;margin:0px 200px"></a>
+                  width="320" alt="HTTPS Everywhere" style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">HTTPS Everywhere</p>
               </div>
@@ -382,7 +382,7 @@
           <div class="col-lg-6">
             <div class="overlay-container">
               <a href="https://noscript.net/"><img src="../img/noscript.png" height="256" width="256" alt="NoScript"
-                  style="vertical-align:middle;margin:0px 230px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">NoScript</p>
               </div>
@@ -411,7 +411,7 @@
             <div class="overlay-container">
               <br><br><br>
               <a href="https://tails.boum.org/"><img src="../img/tails.png" height="113" width="610" alt="Tails"
-                  style="vertical-align:middle;margin:0px 30px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Tails - The Amnesic Incognito Live System</p>
               </div>
@@ -451,7 +451,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://www.kali.org/"><img src="../img/kali.png" height="240" width="576" alt="Kali Linux"
-                  style="vertical-align:middle;margin:10px 50px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:10px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Kali Linux</p>
               </div>
@@ -481,7 +481,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://www.ghostbsd.org/"><img src="../img/GhostBSD.jpg" height="240" width="576"
-                  alt="GhostBSD" style="vertical-align:middle;margin:10px 50px"></a>
+                  alt="GhostBSD" style="max-width:100%;height:auto;display:block;margin:10px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">GhostBSD</p>
               </div>
@@ -511,7 +511,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://www.virtualbox.org/"><img src="../img/Fedora_21_on_OSX.png" height="240" width="576"
-                  alt="VirtualBox" style="vertical-align:middle;margin:0px 50px"></a>
+                  alt="VirtualBox" style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">VirtualBox 5.0 for Mac OS X. Within VirtualBox Fedora 21 is running.</p>
               </div>
@@ -538,7 +538,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://openvpn.net/"><img src="../img/openvpn.gif" height="350" width="500" alt="OpenVPN"
-                  style="vertical-align:middle;margin:0px 75px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">OpenVPN</p>
               </div>
@@ -585,7 +585,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://gnupg.org/"><img src="../img/gnupg.png" height="240" width="576"
-                  alt="GnuPG" style="vertical-align:middle;margin:10px 50px"></a>
+                  alt="GnuPG" style="max-width:100%;height:auto;display:block;margin:10px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">GnuPG - GNU Privacy Guard</p>
               </div>
@@ -615,7 +615,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://www.wireshark.org/"><img src="../img/wireshark.png" height="120" width="288"
-                  alt="Wireshark" style="vertical-align:middle;margin:10px 50px"></a>
+                  alt="Wireshark" style="max-width:100%;height:auto;display:block;margin:10px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Wireshark Network Protocol Analyzer</p>
               </div>
@@ -645,7 +645,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://www.pfsense.org/"><img src="../img/pfsense.svg" height="240" width="576"
-                  alt="pfSense" style="vertical-align:middle;margin:10px 50px"></a>
+                  alt="pfSense" style="max-width:100%;height:auto;display:block;margin:10px auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">pfSense Firewall</p>
               </div>
@@ -675,7 +675,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="https://wikileaks.org/"><img src="../img/wikileaks.png" height="350" width="500" alt="WikiLeaks"
-                  style="vertical-align:middle;margin:0px 90px"></a>
+                  style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">WikiLeaks</p>
               </div>
@@ -706,7 +706,7 @@
             <div class="overlay-container">
               <br><br>
               <a href="http://sectools.org/"><img src="../img/sectools.png" height="350" width="350"
-                  alt="Top 125 Network Security Tools" style="vertical-align:middle;margin:0px 160px"></a>
+                  alt="Top 125 Network Security Tools" style="max-width:100%;height:auto;display:block;margin:0 auto"></a>
               <div class="overlay-to-top">
                 <p class="small margin-clear">Top 125 Network Security Tools</p>
               </div>
