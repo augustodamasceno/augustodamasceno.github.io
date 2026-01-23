@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Bitwise Calculator | Augusto Damasceno</title>
+  <meta name="title" content="Bitwise Calculator - Interactive Binary Operations">
+  <meta name="description" content="Free interactive bitwise calculator for binary operations. Supports AND, OR, XOR, NOT, shifts, and rotations. Includes presets for x86, ARM, AVR, ATmega registers. 8/16/32/64-bit modes.">
+  <meta name="keywords" content="bitwise calculator, binary operations, AND OR XOR, bit manipulation, assembly registers, x86 registers, ARM registers, AVR, ATmega, programming tool">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/bitwise/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/bitwise/">
+  <meta property="og:title" content="Bitwise Calculator - Interactive Binary Operations">
+  <meta property="og:description" content="Interactive bitwise calculator with register presets for x86, ARM, AVR. Click bits to toggle. Supports all bitwise operations.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://augustodamasceno.org/bitwise/">
+  <meta property="twitter:title" content="Bitwise Calculator - Interactive Binary Operations">
+  <meta property="twitter:description" content="Free interactive bitwise calculator with register presets. 8/16/32/64-bit support.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Bitwise Calculator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Interactive bitwise calculator for binary operations including AND, OR, XOR, NOT, shifts, and rotations with register presets for x86, ARM, AVR, and ATmega.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": "Bitwise AND, OR, XOR, NOT, NAND, NOR, XNOR, Left Shift, Right Shift, Rotate Left, Rotate Right, 8/16/32/64-bit modes, Register presets for x86/x64/ARM/AVR/ATmega"
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <style>
+    .bitwise-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .bit-vector {
+      display: flex;
+      gap: 4px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bit {
+      width: 45px;
+      height: 45px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .bit:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .bit.zero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .bit.one {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+    }
+
+    .bit-label {
+      font-size: 10px;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    .vector-row {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .vector-label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .hex-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 16px;
+      color: #00A8E8;
+      margin: 10px 0;
+    }
+
+    .dec-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .operation-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .op-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .op-btn.and { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+    .op-btn.or { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+    .op-btn.xor { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; }
+    .op-btn.not { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; }
+    .op-btn.nand { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; }
+    .op-btn.nor { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); color: white; }
+    .op-btn.xnor { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; }
+    .op-btn.shift { background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%); color: white; }
+
+    .op-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .size-selector {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .size-btn {
+      padding: 10px 20px;
+      border: 2px solid #00A8E8;
+      background: white;
+      color: #00A8E8;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .size-btn.active {
+      background: #00A8E8;
+      color: white;
+    }
+
+    .preset-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .preset-btn {
+      padding: 10px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .preset-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .result-row {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .control-panel {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body class="front-page transparent-header">
+
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <div class="page-wrapper">
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto">
+              <div class="header-first clearfix">
+                <ul class="list-inline">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="page-start"></div>
+
+    <section class="light-gray-bg pv-20">
+      <br><br><br>
+      <div class="container">
+        <h1 class="text-center mb-4"><i class="fas fa-cogs"></i> Bitwise Calculator</h1>
+        <p class="text-center text-muted mb-5">Interactive binary operations with register presets</p>
+
+        <div class="bitwise-container">
+          
+          <!-- Size Selector -->
+          <div class="control-panel">
+            <h4 class="text-center mb-3">Bit Size</h4>
+            <div class="size-selector">
+              <button class="size-btn" onclick="changeBitSize(8)">8-bit</button>
+              <button class="size-btn active" onclick="changeBitSize(16)">16-bit</button>
+              <button class="size-btn" onclick="changeBitSize(32)">32-bit</button>
+              <button class="size-btn" onclick="changeBitSize(64)">64-bit</button>
+            </div>
+          </div>
+
+          <!-- Vector A -->
+          <div class="vector-row">
+            <div class="vector-label">Vector A <button class="btn btn-sm btn-secondary ml-2" onclick="randomizeVector('A')"><i class="fas fa-random"></i> Random</button></div>
+            <div class="bit-vector" id="vectorA"></div>
+            <div class="hex-value">HEX: <span id="hexA">0x0000</span></div>
+            <div class="dec-value">DEC: <span id="decA">0</span> | BIN: <span id="binA">0</span></div>
+          </div>
+
+          <!-- Vector B -->
+          <div class="vector-row">
+            <div class="vector-label">Vector B <button class="btn btn-sm btn-secondary ml-2" onclick="randomizeVector('B')"><i class="fas fa-random"></i> Random</button></div>
+            <div class="bit-vector" id="vectorB"></div>
+            <div class="hex-value">HEX: <span id="hexB">0x0000</span></div>
+            <div class="dec-value">DEC: <span id="decB">0</span> | BIN: <span id="binB">0</span></div>
+          </div>
+
+          <!-- Operations -->
+          <div class="control-panel">
+            <h4 class="text-center mb-3">Bitwise Operations</h4>
+            <div class="operation-buttons">
+              <button class="op-btn and" onclick="performOperation('AND')">A AND B</button>
+              <button class="op-btn or" onclick="performOperation('OR')">A OR B</button>
+              <button class="op-btn xor" onclick="performOperation('XOR')">A XOR B</button>
+              <button class="op-btn not" onclick="performOperation('NOT_A')">NOT A</button>
+              <button class="op-btn not" onclick="performOperation('NOT_B')">NOT B</button>
+              <button class="op-btn nand" onclick="performOperation('NAND')">A NAND B</button>
+              <button class="op-btn nor" onclick="performOperation('NOR')">A NOR B</button>
+              <button class="op-btn xnor" onclick="performOperation('XNOR')">A XNOR B</button>
+              <button class="op-btn shift" onclick="performOperation('SHL_A')">A << 1</button>
+              <button class="op-btn shift" onclick="performOperation('SHR_A')">A >> 1</button>
+              <button class="op-btn shift" onclick="performOperation('ROL_A')">A ROL 1</button>
+              <button class="op-btn shift" onclick="performOperation('ROR_A')">A ROR 1</button>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="vector-row result-row">
+            <div class="vector-label">Result</div>
+            <div class="bit-vector" id="vectorResult"></div>
+            <div class="hex-value">HEX: <span id="hexResult">0x0000</span></div>
+            <div class="dec-value">DEC: <span id="decResult">0</span> | BIN: <span id="binResult">0</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+
+  <script>
+    let bitSize = 16;
+    let vectorA = new Array(bitSize).fill(0);
+    let vectorB = new Array(bitSize).fill(0);
+    let vectorResult = new Array(bitSize).fill(0);
+
+    function initVectors() {
+      renderVector('A', vectorA);
+      renderVector('B', vectorB);
+      renderVector('Result', vectorResult);
+      updateValues();
+    }
+
+    function renderVector(name, vector) {
+      const containerId = `vector${name}`;
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+
+      vector.forEach((bit, index) => {
+        const bitDiv = document.createElement('div');
+        bitDiv.className = `bit ${bit === 0 ? 'zero' : 'one'}`;
+        bitDiv.textContent = bit;
+        bitDiv.onclick = () => toggleBit(name, index);
+        
+        const bitIndex = vector.length - 1 - index;
+        bitDiv.title = `Bit ${bitIndex}`;
+        
+        container.appendChild(bitDiv);
+      });
+    }
+
+    function toggleBit(vectorName, index) {
+      if (vectorName === 'A') {
+        vectorA[index] = vectorA[index] === 0 ? 1 : 0;
+        renderVector('A', vectorA);
+      } else if (vectorName === 'B') {
+        vectorB[index] = vectorB[index] === 0 ? 1 : 0;
+        renderVector('B', vectorB);
+      }
+      updateValues();
+    }
+
+    function vectorToNumber(vector) {
+      let num = 0;
+      for (let i = 0; i < vector.length; i++) {
+        if (vector[i] === 1) {
+          num += Math.pow(2, vector.length - 1 - i);
+        }
+      }
+      return num;
+    }
+
+    function numberToVector(num, size) {
+      const vector = [];
+      for (let i = size - 1; i >= 0; i--) {
+        vector.push((num >> i) & 1);
+      }
+      return vector;
+    }
+
+    function updateValues() {
+      const numA = vectorToNumber(vectorA);
+      const numB = vectorToNumber(vectorB);
+      const numResult = vectorToNumber(vectorResult);
+
+      document.getElementById('hexA').textContent = '0x' + numA.toString(16).toUpperCase().padStart(Math.ceil(bitSize/4), '0');
+      document.getElementById('decA').textContent = numA;
+      document.getElementById('binA').textContent = numA.toString(2).padStart(bitSize, '0');
+
+      document.getElementById('hexB').textContent = '0x' + numB.toString(16).toUpperCase().padStart(Math.ceil(bitSize/4), '0');
+      document.getElementById('decB').textContent = numB;
+      document.getElementById('binB').textContent = numB.toString(2).padStart(bitSize, '0');
+
+      document.getElementById('hexResult').textContent = '0x' + numResult.toString(16).toUpperCase().padStart(Math.ceil(bitSize/4), '0');
+      document.getElementById('decResult').textContent = numResult;
+      document.getElementById('binResult').textContent = numResult.toString(2).padStart(bitSize, '0');
+    }
+
+    function performOperation(op) {
+      const numA = vectorToNumber(vectorA);
+      const numB = vectorToNumber(vectorB);
+      let result = 0;
+      const mask = (1 << bitSize) - 1;
+
+      switch(op) {
+        case 'AND': result = (numA & numB) & mask; break;
+        case 'OR': result = (numA | numB) & mask; break;
+        case 'XOR': result = (numA ^ numB) & mask; break;
+        case 'NOT_A': result = (~numA) & mask; break;
+        case 'NOT_B': result = (~numB) & mask; break;
+        case 'NAND': result = (~(numA & numB)) & mask; break;
+        case 'NOR': result = (~(numA | numB)) & mask; break;
+        case 'XNOR': result = (~(numA ^ numB)) & mask; break;
+        case 'SHL_A': result = (numA << 1) & mask; break;
+        case 'SHR_A': result = (numA >>> 1) & mask; break;
+        case 'ROL_A': 
+          result = ((numA << 1) | (numA >>> (bitSize - 1))) & mask; 
+          break;
+        case 'ROR_A': 
+          result = ((numA >>> 1) | (numA << (bitSize - 1))) & mask; 
+          break;
+      }
+
+      vectorResult = numberToVector(result, bitSize);
+      renderVector('Result', vectorResult);
+      updateValues();
+    }
+
+    function changeBitSize(newSize) {
+      bitSize = newSize;
+      document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      vectorA = numberToVector(vectorToNumber(vectorA), bitSize);
+      vectorB = numberToVector(vectorToNumber(vectorB), bitSize);
+      vectorResult = numberToVector(vectorToNumber(vectorResult), bitSize);
+
+      initVectors();
+    }
+
+    function randomizeVector(name) {
+      const max = Math.pow(2, bitSize) - 1;
+      const randomNum = Math.floor(Math.random() * max);
+      
+      if (name === 'A') {
+        vectorA = numberToVector(randomNum, bitSize);
+        renderVector('A', vectorA);
+      } else if (name === 'B') {
+        vectorB = numberToVector(randomNum, bitSize);
+        renderVector('B', vectorB);
+      }
+      updateValues();
+    }
+
+    // Initialize on page load
+    initVectors();
+  </script>
+</body>
+
+</html>

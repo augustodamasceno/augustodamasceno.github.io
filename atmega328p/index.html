@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Bitwise Operations & ATmega328P Registers | Augusto Damasceno</title>
+  <meta name="title" content="Bitwise Operations & ATmega328P Registers">
+  <meta name="description" content="Reference guide for bitwise operations and ATmega328P microcontroller register map. Complete register addresses and bit definitions for embedded programming.">
+  <meta name="keywords" content="bitwise operations, ATmega328P, Arduino, AVR, registers, embedded systems, microcontroller, bit manipulation">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/atmega328p/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/atmega328p/">
+  <meta property="og:title" content="Bitwise Operations & ATmega328P Registers">
+  <meta property="og:description" content="Reference guide for bitwise operations and ATmega328P register map">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/atmega328p/">
+  <meta property="twitter:title" content="Bitwise Operations & ATmega328P Registers">
+  <meta property="twitter:description" content="Reference guide for bitwise operations and ATmega328P register map">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Bitwise Operations & ATmega328P Registers",
+    "description": "Reference guide for bitwise operations and ATmega328P microcontroller register map with complete register addresses and bit definitions",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "keywords": "bitwise operations, ATmega328P, Arduino, AVR, registers, embedded systems"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- ATmega328P CSS -->
+  <link href="../css/atmega328p.css" rel="stylesheet">
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto">
+              <div class="header-first clearfix">
+                <ul class="list-inline">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto"></div>
+            <div class="col-auto hidden-md-down"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="page-start"></div>
+
+    <!-- section start -->
+    <section class="atmega328p-section">
+      <div class="atmega328p-container">
+        <div class="atmega328p-card">
+          <h1><i class="fas fa-microchip"></i> ATmega328P Register Map</h1>
+          <p class="subtitle">Complete register reference for bitwise operations on ATmega328P microcontroller</p>
+          
+          <!-- Register Table -->
+          <div class="register-table-wrapper">
+            <div class="table-responsive">
+              <table class="register-table">
+                <thead>
+                  <tr>
+                    <th>Register</th>
+                    <th>Address</th>
+                    <th>Bit 7</th>
+                    <th>Bit 6</th>
+                    <th>Bit 5</th>
+                    <th>Bit 4</th>
+                    <th>Bit 3</th>
+                    <th>Bit 2</th>
+                    <th>Bit 1</th>
+                    <th>Bit 0</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="register-name">SREG</td>
+                    <td class="register-addr">0x3F</td>
+                    <td class="bit-cell">I</td>
+                    <td class="bit-cell">T</td>
+                    <td class="bit-cell">H</td>
+                    <td class="bit-cell">S</td>
+                    <td class="bit-cell">V</td>
+                    <td class="bit-cell">N</td>
+                    <td class="bit-cell">Z</td>
+                    <td class="bit-cell">C</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">MCUCR</td>
+                    <td class="register-addr">0x35</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">BODS</td>
+                    <td class="bit-cell">BODSE</td>
+                    <td class="bit-cell">PUD</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">IVSEL</td>
+                    <td class="bit-cell">IVCE</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">MCUSR</td>
+                    <td class="register-addr">0x34</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WDRF</td>
+                    <td class="bit-cell">BORF</td>
+                    <td class="bit-cell">EXTRF</td>
+                    <td class="bit-cell">PORF</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">WDTCSR</td>
+                    <td class="register-addr">0x60</td>
+                    <td class="bit-cell">WDIF</td>
+                    <td class="bit-cell">WDIE</td>
+                    <td class="bit-cell">WDP3</td>
+                    <td class="bit-cell">WDCE</td>
+                    <td class="bit-cell">WDE</td>
+                    <td class="bit-cell">WDP2</td>
+                    <td class="bit-cell">WDP1</td>
+                    <td class="bit-cell">WDP0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">PRR</td>
+                    <td class="register-addr">0x64</td>
+                    <td class="bit-cell">PRTWI</td>
+                    <td class="bit-cell">PRTIM2</td>
+                    <td class="bit-cell">PRTIM0</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">PRTIM1</td>
+                    <td class="bit-cell">PRSPI</td>
+                    <td class="bit-cell">PRUSART0</td>
+                    <td class="bit-cell">PRADC</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">CLKPR</td>
+                    <td class="register-addr">0x61</td>
+                    <td class="bit-cell">CLKPCE</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">CLKPS3</td>
+                    <td class="bit-cell">CLKPS2</td>
+                    <td class="bit-cell">CLKPS1</td>
+                    <td class="bit-cell">CLKPS0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">OSCCAL</td>
+                    <td class="register-addr">0x66</td>
+                    <td class="bit-cell">CAL7</td>
+                    <td class="bit-cell">CAL6</td>
+                    <td class="bit-cell">CAL5</td>
+                    <td class="bit-cell">CAL4</td>
+                    <td class="bit-cell">CAL3</td>
+                    <td class="bit-cell">CAL2</td>
+                    <td class="bit-cell">CAL1</td>
+                    <td class="bit-cell">CAL0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">EICRA</td>
+                    <td class="register-addr">0x69</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">ISC11</td>
+                    <td class="bit-cell">ISC10</td>
+                    <td class="bit-cell">ISC01</td>
+                    <td class="bit-cell">ISC00</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">EIMSK</td>
+                    <td class="register-addr">0x1D</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">INT1</td>
+                    <td class="bit-cell">INT0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">EIFR</td>
+                    <td class="register-addr">0x1C</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">INTF1</td>
+                    <td class="bit-cell">INTF0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">PCICR</td>
+                    <td class="register-addr">0x68</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">PCIE2</td>
+                    <td class="bit-cell">PCIE1</td>
+                    <td class="bit-cell">PCIE0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">PCIFR</td>
+                    <td class="register-addr">0x1B</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">PCIF2</td>
+                    <td class="bit-cell">PCIF1</td>
+                    <td class="bit-cell">PCIF0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR0A</td>
+                    <td class="register-addr">0x24</td>
+                    <td class="bit-cell">COM0A1</td>
+                    <td class="bit-cell">COM0A0</td>
+                    <td class="bit-cell">COM0B1</td>
+                    <td class="bit-cell">COM0B0</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM01</td>
+                    <td class="bit-cell">WGM00</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR0B</td>
+                    <td class="register-addr">0x25</td>
+                    <td class="bit-cell">FOC0A</td>
+                    <td class="bit-cell">FOC0B</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM02</td>
+                    <td class="bit-cell">CS02</td>
+                    <td class="bit-cell">CS01</td>
+                    <td class="bit-cell">CS00</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TIMSK0</td>
+                    <td class="register-addr">0x6E</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">OCIE0B</td>
+                    <td class="bit-cell">OCIE0A</td>
+                    <td class="bit-cell">TOIE0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR1A</td>
+                    <td class="register-addr">0x80</td>
+                    <td class="bit-cell">COM1A1</td>
+                    <td class="bit-cell">COM1A0</td>
+                    <td class="bit-cell">COM1B1</td>
+                    <td class="bit-cell">COM1B0</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM11</td>
+                    <td class="bit-cell">WGM10</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR1B</td>
+                    <td class="register-addr">0x81</td>
+                    <td class="bit-cell">ICNC1</td>
+                    <td class="bit-cell">ICES1</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM13</td>
+                    <td class="bit-cell">WGM12</td>
+                    <td class="bit-cell">CS12</td>
+                    <td class="bit-cell">CS11</td>
+                    <td class="bit-cell">CS10</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR1C</td>
+                    <td class="register-addr">0x82</td>
+                    <td class="bit-cell">FOC1A</td>
+                    <td class="bit-cell">FOC1B</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TIMSK1</td>
+                    <td class="register-addr">0x6F</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">ICIE1</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">OCIE1B</td>
+                    <td class="bit-cell">OCIE1A</td>
+                    <td class="bit-cell">TOIE1</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR2A</td>
+                    <td class="register-addr">0xB0</td>
+                    <td class="bit-cell">COM2A1</td>
+                    <td class="bit-cell">COM2A0</td>
+                    <td class="bit-cell">COM2B1</td>
+                    <td class="bit-cell">COM2B0</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM21</td>
+                    <td class="bit-cell">WGM20</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TCCR2B</td>
+                    <td class="register-addr">0xB1</td>
+                    <td class="bit-cell">FOC2A</td>
+                    <td class="bit-cell">FOC2B</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">WGM22</td>
+                    <td class="bit-cell">CS22</td>
+                    <td class="bit-cell">CS21</td>
+                    <td class="bit-cell">CS20</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TIMSK2</td>
+                    <td class="register-addr">0x70</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">OCIE2B</td>
+                    <td class="bit-cell">OCIE2A</td>
+                    <td class="bit-cell">TOIE2</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">ASSR</td>
+                    <td class="register-addr">0xB6</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">EXCLK</td>
+                    <td class="bit-cell">AS2</td>
+                    <td class="bit-cell">TCN2UB</td>
+                    <td class="bit-cell">OCR2AUB</td>
+                    <td class="bit-cell">OCR2BUB</td>
+                    <td class="bit-cell">TCR2AUB</td>
+                    <td class="bit-cell">TCR2BUB</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">SPCR</td>
+                    <td class="register-addr">0x2C</td>
+                    <td class="bit-cell">SPIE</td>
+                    <td class="bit-cell">SPE</td>
+                    <td class="bit-cell">DORD</td>
+                    <td class="bit-cell">MSTR</td>
+                    <td class="bit-cell">CPOL</td>
+                    <td class="bit-cell">CPHA</td>
+                    <td class="bit-cell">SPR1</td>
+                    <td class="bit-cell">SPR0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">SPSR</td>
+                    <td class="register-addr">0x2D</td>
+                    <td class="bit-cell">SPIF</td>
+                    <td class="bit-cell">WCOL</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">SPI2X</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">UCSR0A</td>
+                    <td class="register-addr">0xC0</td>
+                    <td class="bit-cell">RXC0</td>
+                    <td class="bit-cell">TXC0</td>
+                    <td class="bit-cell">UDRE0</td>
+                    <td class="bit-cell">FE0</td>
+                    <td class="bit-cell">DOR0</td>
+                    <td class="bit-cell">UPE0</td>
+                    <td class="bit-cell">U2X0</td>
+                    <td class="bit-cell">MPCM0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">UCSR0B</td>
+                    <td class="register-addr">0xC1</td>
+                    <td class="bit-cell">RXCIE0</td>
+                    <td class="bit-cell">TXCIE0</td>
+                    <td class="bit-cell">UDRIE0</td>
+                    <td class="bit-cell">RXEN0</td>
+                    <td class="bit-cell">TXEN0</td>
+                    <td class="bit-cell">UCSZ02</td>
+                    <td class="bit-cell">RXB80</td>
+                    <td class="bit-cell">TXB80</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">UCSR0C</td>
+                    <td class="register-addr">0xC2</td>
+                    <td class="bit-cell">UMSEL01</td>
+                    <td class="bit-cell">UMSEL00</td>
+                    <td class="bit-cell">UPM01</td>
+                    <td class="bit-cell">UPM00</td>
+                    <td class="bit-cell">USBS0</td>
+                    <td class="bit-cell">UCSZ01</td>
+                    <td class="bit-cell">UCSZ00</td>
+                    <td class="bit-cell">UCPOL0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TWCR</td>
+                    <td class="register-addr">0xBC</td>
+                    <td class="bit-cell">TWINT</td>
+                    <td class="bit-cell">TWEA</td>
+                    <td class="bit-cell">TWSTA</td>
+                    <td class="bit-cell">TWSTO</td>
+                    <td class="bit-cell">TWWC</td>
+                    <td class="bit-cell">TWEN</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">TWIE</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">TWSR</td>
+                    <td class="register-addr">0xB9</td>
+                    <td class="bit-cell">TWS7</td>
+                    <td class="bit-cell">TWS6</td>
+                    <td class="bit-cell">TWS5</td>
+                    <td class="bit-cell">TWS4</td>
+                    <td class="bit-cell">TWS3</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">TWPS1</td>
+                    <td class="bit-cell">TWPS0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">ADCSRA</td>
+                    <td class="register-addr">0x7A</td>
+                    <td class="bit-cell">ADEN</td>
+                    <td class="bit-cell">ADSC</td>
+                    <td class="bit-cell">ADATE</td>
+                    <td class="bit-cell">ADIF</td>
+                    <td class="bit-cell">ADIE</td>
+                    <td class="bit-cell">ADPS2</td>
+                    <td class="bit-cell">ADPS1</td>
+                    <td class="bit-cell">ADPS0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">ADCSRB</td>
+                    <td class="register-addr">0x7B</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">ACME</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">ADTS2</td>
+                    <td class="bit-cell">ADTS1</td>
+                    <td class="bit-cell">ADTS0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">ADMUX</td>
+                    <td class="register-addr">0x7C</td>
+                    <td class="bit-cell">REFS1</td>
+                    <td class="bit-cell">REFS0</td>
+                    <td class="bit-cell">ADLAR</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">MUX3</td>
+                    <td class="bit-cell">MUX2</td>
+                    <td class="bit-cell">MUX1</td>
+                    <td class="bit-cell">MUX0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">DIDR0</td>
+                    <td class="register-addr">0x7E</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">ADC5D</td>
+                    <td class="bit-cell">ADC4D</td>
+                    <td class="bit-cell">ADC3D</td>
+                    <td class="bit-cell">ADC2D</td>
+                    <td class="bit-cell">ADC1D</td>
+                    <td class="bit-cell">ADC0D</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">DIDR1</td>
+                    <td class="register-addr">0x7F</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">AIN1D</td>
+                    <td class="bit-cell">AIN0D</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">ACSR</td>
+                    <td class="register-addr">0x30</td>
+                    <td class="bit-cell">ACD</td>
+                    <td class="bit-cell">ACBG</td>
+                    <td class="bit-cell">ACO</td>
+                    <td class="bit-cell">ACI</td>
+                    <td class="bit-cell">ACIE</td>
+                    <td class="bit-cell">ACIC</td>
+                    <td class="bit-cell">ACIS1</td>
+                    <td class="bit-cell">ACIS0</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">EECR</td>
+                    <td class="register-addr">0x1F</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">EEPM1</td>
+                    <td class="bit-cell">EEPM0</td>
+                    <td class="bit-cell">EERIE</td>
+                    <td class="bit-cell">EEMPE</td>
+                    <td class="bit-cell">EEPE</td>
+                    <td class="bit-cell">EERE</td>
+                  </tr>
+                  <tr>
+                    <td class="register-name">SPMCSR</td>
+                    <td class="register-addr">0x37</td>
+                    <td class="bit-cell">SPMIE</td>
+                    <td class="bit-cell">RWWSB</td>
+                    <td class="bit-cell empty">-</td>
+                    <td class="bit-cell">RWWSRE</td>
+                    <td class="bit-cell">BLBSET</td>
+                    <td class="bit-cell">PGWRT</td>
+                    <td class="bit-cell">PGERS</td>
+                    <td class="bit-cell">SELFPRGEN</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Bitwise Operations Guide -->
+        <div class="explanation-card">
+          <h2><i class="fas fa-code"></i> Common Bitwise Operations</h2>
+          <div class="explanation-content">
+            <p>
+              Bitwise operations are fundamental for embedded programming, allowing direct manipulation 
+              of hardware registers at the bit level.
+            </p>
+            
+            <div class="operations-grid">
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-check-square"></i>
+                  <h4>Set a Bit</h4>
+                </div>
+                <code>REGISTER |= (1 << BIT_NUMBER);</code>
+                <p class="op-description">Sets the specified bit to 1 without affecting other bits</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>PORTB |= (1 << PB5);</code>
+                  <br><span class="example-desc">Sets bit 5 of PORTB to HIGH</span>
+                </div>
+              </div>
+              
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-times-circle"></i>
+                  <h4>Clear a Bit</h4>
+                </div>
+                <code>REGISTER &= ~(1 << BIT_NUMBER);</code>
+                <p class="op-description">Clears the specified bit to 0 without affecting other bits</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>PORTB &= ~(1 << PB5);</code>
+                  <br><span class="example-desc">Sets bit 5 of PORTB to LOW</span>
+                </div>
+              </div>
+              
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-toggle-on"></i>
+                  <h4>Toggle a Bit</h4>
+                </div>
+                <code>REGISTER ^= (1 << BIT_NUMBER);</code>
+                <p class="op-description">Flips the specified bit (0→1 or 1→0)</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>PORTB ^= (1 << PB5);</code>
+                  <br><span class="example-desc">Toggles bit 5 of PORTB</span>
+                </div>
+              </div>
+              
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-question-circle"></i>
+                  <h4>Test a Bit</h4>
+                </div>
+                <code>if (REGISTER & (1 << BIT_NUMBER))</code>
+                <p class="op-description">Checks if the specified bit is set (returns non-zero if true)</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>if (PINB & (1 << PB5))</code>
+                  <br><span class="example-desc">Tests if bit 5 of PINB is HIGH</span>
+                </div>
+              </div>
+              
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-layer-group"></i>
+                  <h4>Set Multiple Bits</h4>
+                </div>
+                <code>REGISTER |= (1 << BIT1) | (1 << BIT2);</code>
+                <p class="op-description">Sets multiple bits simultaneously</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>DDRB |= (1 << PB4) | (1 << PB5);</code>
+                  <br><span class="example-desc">Sets bits 4 and 5 of DDRB as outputs</span>
+                </div>
+              </div>
+              
+              <div class="operation-item">
+                <div class="operation-header">
+                  <i class="fas fa-eraser"></i>
+                  <h4>Clear Multiple Bits</h4>
+                </div>
+                <code>REGISTER &= ~((1 << BIT1) | (1 << BIT2));</code>
+                <p class="op-description">Clears multiple bits simultaneously</p>
+                <div class="example">
+                  <strong>Example:</strong> <code>PORTB &= ~((1 << PB4) | (1 << PB5));</code>
+                  <br><span class="example-desc">Clears bits 4 and 5 of PORTB</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="register-categories">
+              <h3><i class="fas fa-list"></i> Register Categories</h3>
+              <div class="category-grid">
+                <div class="category-item">
+                  <h5><i class="fas fa-cog"></i> System Control</h5>
+                  <p>SREG, MCUCR, MCUSR, PRR, CLKPR</p>
+                </div>
+                <div class="category-item">
+                  <h5><i class="fas fa-bell"></i> Interrupts</h5>
+                  <p>EICRA, EIMSK, EIFR, PCICR, PCIFR</p>
+                </div>
+                <div class="category-item">
+                  <h5><i class="fas fa-clock"></i> Timers</h5>
+                  <p>TCCR0A/B, TCCR1A/B/C, TCCR2A/B, TIMSK0/1/2</p>
+                </div>
+                <div class="category-item">
+                  <h5><i class="fas fa-exchange-alt"></i> Communication</h5>
+                  <p>SPCR, SPSR (SPI), UCSR0A/B/C (USART), TWCR, TWSR (TWI)</p>
+                </div>
+                <div class="category-item">
+                  <h5><i class="fas fa-tachometer-alt"></i> ADC</h5>
+                  <p>ADCSRA, ADCSRB, ADMUX, DIDR0, DIDR1</p>
+                </div>
+                <div class="category-item">
+                  <h5><i class="fas fa-database"></i> Memory</h5>
+                  <p>EECR (EEPROM), SPMCSR (Flash)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tips-section">
+              <h3><i class="fas fa-lightbulb"></i> Pro Tips</h3>
+              <ul class="tips-list">
+                <li><strong>Use bit-shift operators:</strong> Always use <code>(1 << n)</code> instead of hardcoded values for better readability</li>
+                <li><strong>Read-Modify-Write:</strong> Most register operations require reading the current value, modifying it, then writing back</li>
+                <li><strong>Atomic operations:</strong> For interrupt-sensitive code, disable interrupts during read-modify-write sequences</li>
+                <li><strong>Datasheet reference:</strong> Always consult the ATmega328P datasheet for specific bit functions and restrictions</li>
+                <li><strong>Volatile keyword:</strong> Use <code>volatile</code> for variables shared between ISRs and main code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/meursault.js"></script>
+</body>
+
+</html>
