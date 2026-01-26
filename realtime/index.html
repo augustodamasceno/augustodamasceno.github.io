@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Real-Time Calculator | Augusto Damasceno</title>
+  <meta name="title" content="Real-Time Calculator">
+  <meta name="description" content="Calculate execution periods for USART, PWM, ADC, and I2C peripherals. Configure clock sources, prescalers, and communication parameters for embedded systems.">
+  <meta name="keywords" content="real-time calculator, USART calculator, PWM calculator, ADC calculator, I2C calculator, embedded systems, microcontroller timing, clock prescaler, baud rate calculator">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/realtime/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/realtime/">
+  <meta property="og:title" content="Real-Time Calculator for Embedded Systems">
+  <meta property="og:description" content="Calculate timing and periods for USART, PWM, ADC, and I2C peripherals with configurable clocks and prescalers.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/realtime/">
+  <meta property="twitter:title" content="Real-Time Calculator">
+  <meta property="twitter:description" content="Calculate timing for USART, PWM, ADC, and I2C peripherals.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Real-Time Calculator",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Calculate execution periods and timing for microcontroller peripherals including USART, PWM, ADC, and I2C with configurable clock sources and prescalers",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "USART timing calculation, PWM period calculation, ADC conversion time, I2C timing, Clock prescaler configuration, Baud rate calculator"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- Real-Time Calculator CSS -->
+  <link href="../css/realtime-calculator.css" rel="stylesheet">
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header start -->
+    <header class="header dark fixed fixed-desktop clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-auto">
+            <div class="header-first clearfix">
+              <ul class="list-inline">
+                <li class="list-inline-item" style="vertical-align:bottom">
+                  <div id="logo" class="logo">
+                    <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                  </div>
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-heart pr-2"></i>
+                  Artificial Intelligence
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-microchip pr-2"></i>
+                  Embedded Systems
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-chart-line pr-2"></i>
+                  Quantitative Trading
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 ml-auto"></div>
+          <div class="col-auto hidden-md-down"></div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <div id="page-start"></div>
+
+    <!-- main content start -->
+    <section class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="main col-12">
+            
+            <!-- Title Section -->
+            <div class="text-center mb-5 pt-5">
+              <h1 class="page-title">Real-Time Calculator</h1>
+              <p class="lead">Calculate execution periods for embedded system peripherals</p>
+            </div>
+
+            <!-- USART Section -->
+            <div class="calc-section" id="usart-section">
+              <div class="section-header">
+                <i class="fas fa-wifi"></i>
+                <h2>USART Configuration</h2>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Clock Source (Hz)</label>
+                      <input type="number" id="usart-clock" class="form-control" value="16000000" min="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Prescaler</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-primary active">
+                          <input type="radio" name="usart-prescaler" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-prescaler" value="2"> 2
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-prescaler" value="4"> 4
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-prescaler" value="8"> 8
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-prescaler" value="16"> 16
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Baud Rate</label>
+                      <select id="usart-baud" class="form-control">
+                        <option value="9600" selected>9600</option>
+                        <option value="19200">19200</option>
+                        <option value="38400">38400</option>
+                        <option value="57600">57600</option>
+                        <option value="115200">115200</option>
+                        <option value="230400">230400</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Number of Bytes</label>
+                      <input type="number" id="usart-bytes" class="form-control" value="1" min="1" max="256">
+                    </div>
+                    <div class="form-group">
+                      <label>Data Bits</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-databits" value="5"> 5
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-databits" value="6"> 6
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-databits" value="7"> 7
+                        </label>
+                        <label class="btn btn-outline-primary active">
+                          <input type="radio" name="usart-databits" value="8" checked> 8
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-databits" value="9"> 9
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Stop Bits</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-primary active">
+                          <input type="radio" name="usart-stopbits" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-outline-primary">
+                          <input type="radio" name="usart-stopbits" value="2"> 2
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <h4>Results</h4>
+                  <div class="result-item">
+                    <span class="result-label">Bit Period:</span>
+                    <span class="result-value" id="usart-bit-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Byte Period:</span>
+                    <span class="result-value" id="usart-byte-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Total Transmission Time:</span>
+                    <span class="result-value" id="usart-total-time">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PWM Section -->
+            <div class="calc-section" id="pwm-section">
+              <div class="section-header">
+                <i class="fas fa-wave-square"></i>
+                <h2>PWM Configuration</h2>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Clock Source (Hz)</label>
+                      <input type="number" id="pwm-clock" class="form-control" value="16000000" min="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Prescaler</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-success active">
+                          <input type="radio" name="pwm-prescaler" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-outline-success">
+                          <input type="radio" name="pwm-prescaler" value="8"> 8
+                        </label>
+                        <label class="btn btn-outline-success">
+                          <input type="radio" name="pwm-prescaler" value="64"> 64
+                        </label>
+                        <label class="btn btn-outline-success">
+                          <input type="radio" name="pwm-prescaler" value="256"> 256
+                        </label>
+                        <label class="btn btn-outline-success">
+                          <input type="radio" name="pwm-prescaler" value="1024"> 1024
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Timer Resolution (bits)</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-success active">
+                          <input type="radio" name="pwm-resolution" value="8" checked> 8-bit
+                        </label>
+                        <label class="btn btn-outline-success">
+                          <input type="radio" name="pwm-resolution" value="16"> 16-bit
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>TOP Value (Max Count)</label>
+                      <input type="number" id="pwm-top" class="form-control" value="255" min="1" max="65535">
+                    </div>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <h4>Results</h4>
+                  <div class="result-item">
+                    <span class="result-label">PWM Frequency:</span>
+                    <span class="result-value" id="pwm-frequency">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">PWM Period:</span>
+                    <span class="result-value" id="pwm-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Timer Tick:</span>
+                    <span class="result-value" id="pwm-tick">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ADC Section -->
+            <div class="calc-section" id="adc-section">
+              <div class="section-header">
+                <i class="fas fa-signal"></i>
+                <h2>ADC Configuration</h2>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Clock Source (Hz)</label>
+                      <input type="number" id="adc-clock" class="form-control" value="16000000" min="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Prescaler</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="2"> 2
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="4"> 4
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="8"> 8
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="16"> 16
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="32"> 32
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-prescaler" value="64"> 64
+                        </label>
+                        <label class="btn btn-outline-warning active">
+                          <input type="radio" name="adc-prescaler" value="128" checked> 128
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Resolution (bits)</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-resolution" value="8"> 8-bit
+                        </label>
+                        <label class="btn btn-outline-warning active">
+                          <input type="radio" name="adc-resolution" value="10" checked> 10-bit
+                        </label>
+                        <label class="btn btn-outline-warning">
+                          <input type="radio" name="adc-resolution" value="12"> 12-bit
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Number of Samples</label>
+                      <input type="number" id="adc-samples" class="form-control" value="1" min="1" max="1000">
+                    </div>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <h4>Results</h4>
+                  <div class="result-item">
+                    <span class="result-label">ADC Clock:</span>
+                    <span class="result-value" id="adc-freq">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Single Conversion Time:</span>
+                    <span class="result-value" id="adc-conversion">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Total Sampling Time:</span>
+                    <span class="result-value" id="adc-total">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- I2C Section -->
+            <div class="calc-section" id="i2c-section">
+              <div class="section-header">
+                <i class="fas fa-project-diagram"></i>
+                <h2>I2C Configuration</h2>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Clock Source (Hz)</label>
+                      <input type="number" id="i2c-clock" class="form-control" value="16000000" min="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Prescaler</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-danger active">
+                          <input type="radio" name="i2c-prescaler" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-outline-danger">
+                          <input type="radio" name="i2c-prescaler" value="4"> 4
+                        </label>
+                        <label class="btn btn-outline-danger">
+                          <input type="radio" name="i2c-prescaler" value="16"> 16
+                        </label>
+                        <label class="btn btn-outline-danger">
+                          <input type="radio" name="i2c-prescaler" value="64"> 64
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>SCL Frequency</label>
+                      <select id="i2c-scl" class="form-control">
+                        <option value="100000" selected>100 kHz (Standard)</option>
+                        <option value="400000">400 kHz (Fast)</option>
+                        <option value="1000000">1 MHz (Fast Plus)</option>
+                        <option value="3400000">3.4 MHz (High Speed)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Number of Bytes</label>
+                      <input type="number" id="i2c-bytes" class="form-control" value="1" min="1" max="256">
+                    </div>
+                    <div class="form-group">
+                      <label>Operation Type</label>
+                      <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-danger active">
+                          <input type="radio" name="i2c-operation" value="write" checked> Write
+                        </label>
+                        <label class="btn btn-outline-danger">
+                          <input type="radio" name="i2c-operation" value="read"> Read
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <h4>Results</h4>
+                  <div class="result-item">
+                    <span class="result-label">Bit Period:</span>
+                    <span class="result-value" id="i2c-bit-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Byte Period:</span>
+                    <span class="result-value" id="i2c-byte-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Total Transaction Time:</span>
+                    <span class="result-value" id="i2c-total-time">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main content end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/meursault.js"></script>
+  <!-- Real-Time Calculator JS -->
+  <script src="../js/realtime-calculator.js"></script>
+</body>
+
+</html>

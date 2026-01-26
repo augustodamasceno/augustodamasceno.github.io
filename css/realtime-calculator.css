@@ -1,0 +1,254 @@
+/* Real-Time Calculator Styles */
+
+.page-title {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.calc-section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calc-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.section-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#usart-section .section-header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+#pwm-section .section-header {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+#adc-section .section-header {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+#i2c-section .section-header {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.section-header i {
+  font-size: 28px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-body {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 14px;
+}
+
+.form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-group-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-group-toggle label {
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-group-toggle label:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+}
+
+.btn-group-toggle label.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.btn-outline-primary.active {
+  background: #4facfe !important;
+  border-color: #4facfe !important;
+}
+
+.btn-outline-success.active {
+  background: #43e97b !important;
+  border-color: #43e97b !important;
+}
+
+.btn-outline-warning.active {
+  background: #fee140 !important;
+  border-color: #fee140 !important;
+  color: #2c3e50 !important;
+}
+
+.btn-outline-danger.active {
+  background: #f5576c !important;
+  border-color: #f5576c !important;
+}
+
+.result-box {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.result-box h4 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.result-value {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header {
+    padding: 15px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .section-header i {
+    font-size: 24px;
+  }
+
+  .section-body {
+    padding: 20px;
+  }
+
+  .btn-group-toggle label {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .result-box {
+    padding: 20px;
+  }
+
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+}
+
+/* Animation for results */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-value.updated {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Input number styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5568d3;
+}
