@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Backtesting Time Calculator | Augusto Damasceno</title>
+  <meta name="title" content="Backtesting Time Calculator">
+  <meta name="description" content="Calculate backtesting execution time for trading strategies. Configure time periods, granularity, and execution speed to estimate total backtesting duration for ES futures and other instruments.">
+  <meta name="keywords" content="backtesting calculator, trading strategy testing, backtesting time estimation, ES futures, algorithmic trading, trading simulation, execution time calculator, market data analysis">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/backtesting/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/backtesting/">
+  <meta property="og:title" content="Backtesting Time Calculator for Trading Strategies">
+  <meta property="og:description" content="Estimate backtesting execution time for trading strategies with configurable time periods and granularity. Calculate ES futures data processing time.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://augustodamasceno.org/backtesting/">
+  <meta property="twitter:title" content="Backtesting Time Calculator">
+  <meta property="twitter:description" content="Calculate backtesting execution time for trading strategies with configurable time periods and data granularity.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Backtesting Time Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Calculate and estimate backtesting execution time for trading strategies. Configure time periods, data granularity, and execution speed to determine total processing time for historical market data analysis including ES futures.",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Backtesting time estimation, Trading strategy testing, Time granularity configuration, ES futures data calculation, Historical data analysis, Execution time optimization, Market data processing"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+  <link href="../css/backtesting.css" rel="stylesheet">
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header start -->
+    <header class="header dark fixed fixed-desktop clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-auto">
+            <div class="header-first clearfix">
+              <ul class="list-inline">
+                <li class="list-inline-item" style="vertical-align:bottom">
+                  <div id="logo" class="logo">
+                    <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                  </div>
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-heart pr-2"></i>
+                  Artificial Intelligence
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-microchip pr-2"></i>
+                  Embedded Systems
+                </li>
+                <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                  <i class="fas fa-chart-line pr-2"></i>
+                  Quantitative Trading
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 ml-auto"></div>
+          <div class="col-auto hidden-md-down"></div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <div id="page-start"></div>
+
+    <!-- main content start -->
+    <section class="main-container">
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <div class="main col-12">
+
+            <!-- Page Header -->
+            <div class="text-center mb-5 pt-5">
+              <h1 class="page-title"><i class="fas fa-chart-bar"></i> Backtesting Time Calculator</h1>
+              <p class="lead">Estimate execution time for trading strategy backtesting based on data granularity and period</p>
+            </div>
+
+            <!-- Time Period Section -->
+            <div class="calc-section" id="time-section">
+              <div class="section-header">
+                <i class="fas fa-calendar-alt"></i>
+                <h2>Time Period Configuration</h2>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Years</label>
+                      <input type="number" id="years" class="form-control" value="0" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Months</label>
+                      <input type="number" id="months" class="form-control" value="0" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Weeks</label>
+                      <input type="number" id="weeks" class="form-control" value="1" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Days</label>
+                      <input type="number" id="days" class="form-control" value="0" min="0" step="1">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Hours</label>
+                      <input type="number" id="hours" class="form-control" value="0" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Minutes</label>
+                      <input type="number" id="minutes" class="form-control" value="0" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                      <label>Seconds</label>
+                      <input type="number" id="seconds" class="form-control" value="0" min="0" step="1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Granularity Section -->
+            <div class="calc-section" id="granularity-section">
+              <div class="section-header">
+                <i class="fas fa-cog"></i>
+                <h2>Data Granularity</h2>
+              </div>
+              <div class="section-body">
+                <div class="form-group">
+                  <label>Time Granularity</label>
+                  <select id="granularity" class="form-control">
+                    <option value="1" selected>1 millisecond</option>
+                    <option value="10">10 milliseconds</option>
+                    <option value="100">100 milliseconds</option>
+                    <option value="1000">1 second</option>
+                    <option value="5000">5 seconds</option>
+                    <option value="60000">1 minute</option>
+                    <option value="300000">5 minutes</option>
+                    <option value="900000">15 minutes</option>
+                    <option value="3600000">1 hour</option>
+                    <option value="86400000">1 day</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Execution Speed Section -->
+            <div class="calc-section" id="execution-section">
+              <div class="section-header">
+                <i class="fas fa-tachometer-alt"></i>
+                <h2>Execution Speed Configuration</h2>
+              </div>
+              <div class="section-body">
+                <p class="mb-4"><strong>How fast does your backtesting process data?</strong></p>
+                <div class="execution-speed-grid">
+                  <div class="speed-input-group">
+                    <div class="form-group">
+                      <label>It takes</label>
+                      <input type="number" id="exec-time" class="form-control" value="1" min="0.001" step="0.001">
+                    </div>
+                  </div>
+                  <div class="speed-input-group">
+                    <div class="form-group">
+                      <label>Time Unit</label>
+                      <select id="exec-unit" class="form-control">
+                        <option value="0.000001">Microseconds (µs)</option>
+                        <option value="0.001">Milliseconds (ms)</option>
+                        <option value="1" selected>Seconds (s)</option>
+                        <option value="60">Minutes (min)</option>
+                        <option value="3600">Hours (h)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="speed-input-group">
+                    <div class="form-group">
+                      <label>To process</label>
+                      <select id="data-duration" class="form-control">
+                        <option value="0.001">1 millisecond of data</option>
+                        <option value="0.01">10 milliseconds of data</option>
+                        <option value="0.1">100 milliseconds of data</option>
+                        <option value="1">1 second of data</option>
+                        <option value="60">1 minute of data</option>
+                        <option value="300">5 minutes of data</option>
+                        <option value="900">15 minutes of data</option>
+                        <option value="3600" selected>1 hour of data</option>
+                        <option value="86400">1 day of data</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="speed-input-group">
+                    <div class="form-group">
+                      <label>At granularity</label>
+                      <select id="reference-granularity" class="form-control">
+                        <option value="1" selected>1 millisecond</option>
+                        <option value="10">10 milliseconds</option>
+                        <option value="100">100 milliseconds</option>
+                        <option value="1000">1 second</option>
+                        <option value="5000">5 seconds</option>
+                        <option value="60000">1 minute</option>
+                        <option value="300000">5 minutes</option>
+                        <option value="900000">15 minutes</option>
+                        <option value="3600000">1 hour</option>
+                        <option value="86400000">1 day</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="alert alert-info">
+                  <i class="fas fa-info-circle"></i> 
+                  <strong>Example:</strong> If your system processes 1 hour of 1ms tick data in 2 seconds, enter: <strong>2</strong> + <strong>Seconds</strong> + <strong>1 hour of data</strong> + <strong>1 millisecond</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="calc-section" id="results-section">
+              <div class="section-header">
+                <i class="fas fa-calculator"></i>
+                <h2>Backtesting Execution Time</h2>
+              </div>
+              <div class="section-body">
+                <button class="btn btn-primary btn-lg btn-block mb-4" onclick="calculateBacktesting()">
+                  <i class="fas fa-play"></i> Calculate Backtesting Time
+                </button>
+                <div class="result-box">
+                  <h4>Results</h4>
+                  <div class="result-item">
+                    <span class="result-label">Total Period:</span>
+                    <span class="result-value" id="total-period">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Number of Data Points:</span>
+                    <span class="result-value" id="data-points">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Data Granularity:</span>
+                    <span class="result-value" id="data-granularity">-</span>
+                  </div>
+                  <div class="result-item">
+                    <span class="result-label">Processing Speed:</span>
+                    <span class="result-value" id="processing-speed">-</span>
+                  </div>
+                  <div class="result-item highlight">
+                    <span class="result-label"><strong>Estimated Execution Time:</strong></span>
+                    <span class="result-value" id="execution-time"><strong>-</strong></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- main end -->
+
+        </div>
+      </div>
+    </section>
+    <!-- section end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files placed at the end of the document so the pages load faster -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script src="../plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"></script>
+  <script src="../plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <script src="../plugins/countdown/countdown.js"></script>
+  <script src="../plugins/slick/slick.min.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/backtesting.js"></script>
+
+</body>
+
+</html>
