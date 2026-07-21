@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZD0WRQVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WVZD0WRQVY');
+  </script>
+
+  <meta charset="utf-8">
+  
+  <!-- Primary Meta Tags -->
+  <title>Interest Calculator - Simple & Compound Interest with Growth | Augusto Damasceno</title>
+  <meta name="title" content="Interest Calculator - Simple & Compound Interest with Growth">
+  <meta name="description" content="Free interest calculator for simple and compound interest calculations. Add periodic amounts with linear or exponential growth. Interactive charts and tables for investment analysis.">
+  <meta name="keywords" content="interest calculator, compound interest, simple interest, investment calculator, interest growth, periodic deposits, financial calculator, savings calculator">
+  <meta name="author" content="Augusto Damasceno">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://augustodamasceno.org/interest-calculator/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustodamasceno.org/interest-calculator/">
+  <meta property="og:title" content="Interest Calculator - Simple & Compound Interest">
+  <meta property="og:description" content="Calculate interest with periodic deposits and growth. Interactive charts and analysis for savings and investments.">
+  <meta property="og:site_name" content="Augusto Damasceno">
+
+  <!-- X / Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://augustodamasceno.org/interest-calculator/">
+  <meta property="twitter:title" content="Interest Calculator - Simple & Compound Interest">
+  <meta property="twitter:description" content="Free calculator for interest calculations with periodic deposits and growth analysis.">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/favicon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Interest Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Interactive calculator for simple and compound interest calculations with periodic deposits, linear and exponential growth options, and real-time visualization",
+    "author": {
+      "@type": "Person",
+      "name": "Augusto Damasceno",
+      "url": "https://augustodamasceno.org"
+    },
+    "featureList": "Simple and compound interest, Periodic deposits, Linear and exponential growth, Interactive charts, Results table, Real-time calculations"
+  }
+  </script>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Font Awesome Version 5 CSS -->
+  <link href="../fonts/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="../plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/fullscreen-slider-layout.css" rel="stylesheet">
+  <link href="../plugins/htmlcoder/sliders/slider-style.css" rel="stylesheet">
+  <link href="../css/animations.css" rel="stylesheet">
+  <link href="../plugins/slick/slick.css" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/typography-scheme-3.css" rel="stylesheet">
+  <link href="../css/skins/light_blue.css" rel="stylesheet">
+
+  <!-- Custom css -->
+  <link href="../css/custom.css" rel="stylesheet">
+
+  <!-- Augusto Damasceno's CSS -->
+  <link href="../css/augustodamasceno.css" rel="stylesheet">
+
+  <!-- Interest Calculator CSS -->
+  <link href="../css/interest-calculator.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="../plugins/charts/Chart.min.js"></script>
+</head>
+
+<body class="front-page transparent-header">
+
+  <!-- scrollToTop -->
+  <div class="scrollToTop circle"><i class="fas fa-angle-up"></i></div>
+
+  <!-- page wrapper start -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <header class="header dark fixed fixed-desktop clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-auto">
+              <div class="header-first clearfix">
+                <ul class="list-inline">
+                  <li class="list-inline-item" style="vertical-align:bottom">
+                    <div id="logo" class="logo">
+                      <a href="../"><img id="logo_img" src="../img/name-small.png" alt="Augusto Damasceno"></a>
+                    </div>
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">&emsp;</li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-heart pr-2"></i>
+                    Artificial Intelligence
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-microchip pr-2"></i>
+                    Embedded Systems
+                  </li>
+                  <li class="list-inline-item hidden-md-down" style="vertical-align:bottom">
+                    <i class="fas fa-chart-line pr-2"></i>
+                    Quantitative Trading
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto"></div>
+            <div class="col-auto hidden-md-down"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+          
+          <!-- main start -->
+          <div class="main col-12">
+
+            <!-- Page title start -->
+            <div class="page-title">
+              <h1 class="title">Interest Calculator</h1>
+              <div class="separator-2"></div>
+            </div>
+            <!-- Page title end -->
+
+            <div class="row">
+              <div class="col-lg-12">
+                
+                <!-- Interest Calculator Container -->
+                <div class="ic-calculator-container">
+                  
+                  <!-- Input Parameters -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-sliders-h"></i> Calculator Parameters
+                      </h4>
+
+                      <div class="row">
+                        <!-- Initial Amount -->
+                        <div class="col-md-4 mb-3">
+                          <label for="initialAmountInput" class="form-label">
+                            <strong>Initial Amount:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="initialAmountInput" 
+                                 value="0" 
+                                 step="0.01"
+                                 min="0">
+                          <small class="form-text text-muted">Starting principal</small>
+                        </div>
+
+                        <!-- Interest Rate -->
+                        <div class="col-md-4 mb-3">
+                          <label for="interestRateInput" class="form-label">
+                            <strong>Interest Rate (%) per Period:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="interestRateInput" 
+                                 value="0.8" 
+                                 step="0.01"
+                                 min="0">
+                          <small class="form-text text-muted">Percentage (e.g., 5 for 5%)</small>
+                        </div>
+
+                        <!-- Number of Periods -->
+                        <div class="col-md-4 mb-3">
+                          <label for="periodsInput" class="form-label">
+                            <strong>Number of Periods:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="periodsInput" 
+                                 value="48" 
+                                 step="1"
+                                 min="1">
+                          <small class="form-text text-muted">E.g., 12 months, 10 years</small>
+                        </div>
+
+                        <!-- Periodic Deposit Amount -->
+                        <div class="col-md-4 mb-3">
+                          <label for="depositAmountInput" class="form-label">
+                            <strong>Periodic Deposit Amount:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="depositAmountInput" 
+                                 value="500" 
+                                 step="0.01"
+                                 min="0">
+                          <small class="form-text text-muted">Amount added per period</small>
+                        </div>
+
+                        <!-- Deposit Growth Type -->
+                        <div class="col-md-4 mb-3">
+                          <label for="depositGrowthSelect" class="form-label">
+                            <strong>Deposit Growth:</strong>
+                          </label>
+                          <select class="form-control ic-input" id="depositGrowthSelect">
+                            <option value="none">No Growth</option>
+                            <option value="linear" selected>Linear Growth</option>
+                            <option value="exponential">Exponential Growth</option>
+                          </select>
+                          <small class="form-text text-muted">How deposits change over time</small>
+                        </div>
+
+                        <!-- Growth Rate (only shown for linear/exponential) -->
+                        <div class="col-md-4 mb-3" id="growthRateContainer" style="display: none;">
+                          <label for="growthRateInput" class="form-label">
+                            <strong>Growth Rate (%) per Period:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="growthRateInput" 
+                                 value="2" 
+                                 step="0.01"
+                                 min="-100">
+                          <small class="form-text text-muted">Positive to grow, negative to shrink</small>
+                        </div>
+
+                        <!-- Auto-calculate field selector -->
+                        <div class="col-md-4 mb-3">
+                          <label for="autoCalculateSelect" class="form-label">
+                            <strong>Auto-Calculate:</strong>
+                          </label>
+                          <select class="form-control ic-input" id="autoCalculateSelect">
+                            <option value="none">None (Manual)</option>
+                            <option value="initialAmount">Initial Amount</option>
+                            <option value="interestRate">Interest Rate</option>
+                            <option value="periods">Number of Periods</option>
+                            <option value="depositAmount">Periodic Deposit</option>
+                          </select>
+                          <small class="form-text text-muted">Field to auto-calculate based on others</small>
+                        </div>
+
+                        <!-- Target Final Amount (for auto-calculation) -->
+                        <div class="col-md-4 mb-3" id="targetAmountContainer" style="display: none;">
+                          <label for="targetAmountInput" class="form-label">
+                            <strong>Target Final Amount:</strong>
+                          </label>
+                          <input type="number" 
+                                 class="form-control ic-input" 
+                                 id="targetAmountInput" 
+                                 value="2000" 
+                                 step="0.01"
+                                 min="0">
+                          <small class="form-text text-muted">Target amount to achieve</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Results Display -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-calculator"></i> Calculated Results
+                      </h4>
+
+                      <div class="row">
+                        <!-- Final Amount -->
+                        <div class="col-md-3 mb-3">
+                          <div class="result-box">
+                            <h5 class="text-primary">Final Amount</h5>
+                            <h2 class="display-4 text-center" id="finalAmount">$0.00</h2>
+                            <p class="text-center text-muted">Total after periods</p>
+                          </div>
+                        </div>
+
+                        <!-- Interest Earned -->
+                        <div class="col-md-3 mb-3">
+                          <div class="result-box">
+                            <h5 class="text-success">Interest Earned</h5>
+                            <h2 class="display-4 text-center" id="interestEarned">$0.00</h2>
+                            <p class="text-center text-muted">Total interest only</p>
+                          </div>
+                        </div>
+
+                        <!-- Total Deposits -->
+                        <div class="col-md-3 mb-3">
+                          <div class="result-box">
+                            <h5 class="text-info">Total Deposits</h5>
+                            <h2 class="display-4 text-center" id="totalDeposits">$0.00</h2>
+                            <p class="text-center text-muted">Sum of all deposits</p>
+                          </div>
+                        </div>
+
+                        <!-- Auto-calculated Value -->
+                        <div class="col-md-3 mb-3" id="autoCalcResultContainer" style="display: none;">
+                          <div class="result-box">
+                            <h5 class="text-warning" id="autoCalcLabel">Auto-Calculated</h5>
+                            <h2 class="display-4 text-center" id="autoCalcResult">0.00</h2>
+                            <p class="text-center text-muted" id="autoCalcUnit">Unit</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Periodic Deposit Growth Chart -->
+                  <div class="card mb-4" id="depositGrowthChartContainer" style="display: none;">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-chart-line"></i> Periodic Deposit Growth
+                      </h4>
+                      <div style="position: relative; height: 300px; width: 100%;">
+                        <canvas id="depositGrowthChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Total Amount Evolution Chart -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-chart-area"></i> Total Amount Evolution
+                      </h4>
+                      <div style="position: relative; height: 300px; width: 100%;">
+                        <canvas id="totalAmountChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Results Table -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title mb-4">
+                        <i class="fas fa-table"></i> Period-by-Period Breakdown
+                      </h4>
+                      <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="resultsTable">
+                          <thead class="table-dark">
+                            <tr>
+                              <th>Period</th>
+                              <th>Periodic Deposit</th>
+                              <th>Beginning Balance</th>
+                              <th>Interest Earned</th>
+                              <th>Ending Balance</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tableBody">
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Interest Calculator end -->
+
+              </div>
+            </div>
+
+          </div>
+          <!-- main end -->
+
+        </div>
+      </div>
+
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <footer id="footer" class="clearfix dark">
+      <div class="footer text-white">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-content">
+                  <h2 class="display-4 text-center font-weight-bold">Contacts</h2>
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><i class="fas fa-envelope pl-2"></i> augustodamasceno@protonmail.com</li>
+                  </ul>
+                  <p class="text-center text-muted">Copyright © 2020-2026. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  </div>
+  <!-- page-wrapper end -->
+
+  <!-- JavaScript files placed at the end of the document so the pages load faster -->
+  <!-- Jquery and Bootstrap core js files -->
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Isotope javascript -->
+  <script src="../plugins/isotope/imgloaded.pkgd.min.js"></script>
+  <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+  <!-- Magnific Popup javascript -->
+  <script src="../plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Appear javascript -->
+  <script src="../plugins/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../plugins/waypoints/sticky.min.js"></script>
+  <!-- Count To javascript -->
+  <script src="../plugins/countTo/jquery.countTo.js"></script>
+  <!-- Slick carousel javascript -->
+  <script src="../plugins/slick/slick.min.js"></script>
+  <!-- Initialization of Plugins -->
+  <script src="../js/template.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../js/custom.js"></script>
+  <!-- Meursault Library -->
+  <script src="../js/meursault.js"></script>
+
+  <!-- Interest Calculator Script -->
+  <script src="../js/interest-calculator.js"></script>
+
+</body>
+
+</html>

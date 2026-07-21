@@ -1,0 +1,220 @@
+/* Interest Calculator Styles */
+
+.ic-calculator-container {
+  padding: 20px 0;
+}
+
+.ic-input {
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.ic-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.result-box {
+  padding: 20px;
+  border-left: 4px solid #007bff;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-box h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-box h2 {
+  font-weight: 700;
+  margin: 10px 0;
+  font-size: 1.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-box p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.card {
+  border: 1px solid #e3e6f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.card-title i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-label strong {
+  color: #000;
+}
+
+.table-responsive {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.table {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.table thead th {
+  vertical-align: middle;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+  padding: 15px;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f4f8;
+}
+
+.table tbody td {
+  padding: 12px 15px;
+  vertical-align: middle;
+}
+
+.table .text-muted {
+  color: #999 !important;
+  font-size: 0.9rem;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .result-box {
+    margin-bottom: 15px;
+  }
+
+  .result-box h2 {
+    font-size: 1.25rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 10px 8px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+}
+
+/* Charts Container */
+#totalAmountChart,
+#depositGrowthChart {
+  padding: 10px 0;
+}
+
+/* Animation for results */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-box {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Color scheme variations */
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.text-info {
+  color: #17a2b8 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Page title */
+.page-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.separator-2 {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Main container adjustments */
+.main-container {
+  padding: 60px 0;
+  min-height: calc(100vh - 200px);
+}
