@@ -24,6 +24,11 @@ Colors come from the logo. Use the CSS variables in `assets/css/site.css`.
 ## Fonts
 Orbitron (wordmark), Space Grotesk (headings), Inter (body), JetBrains Mono (numbers/code).
 
+## Personal data
+Only name, email, GitHub and professional content the owner wrote may be published. Everything else needs the
+owner's approval. Every commit goes through the `commit` skill (`.claude/skills/commit/`): it enforces these rules,
+blocks secrets, local machine details and image metadata, then makes the signed commit and pushes.
+
 ## Pages
 - Front matter: `title`, `description`, `ref`.
 - App pages: JSON-LD `WebApplication`, listed on the apps page with a unique icon color.
