@@ -1,0 +1,14 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      {% include wordmark.html class="wordmark--sm" %}
+      <p class="muted">{{ t.footer.tagline }}</p>
+    </div>
+    <ul class="site-footer__links">
+      <li><a href="mailto:{{ site.email }}">{% include icon.html name="mail" px=18 %}<span>{{ site.email }}</span></a></li>
+      <li><a href="https://github.com/{{ site.github_user }}" rel="me noopener">{% include icon.html name="github" px=18 %}<span>GitHub</span></a></li>
+    </ul>
+    <p class="site-footer__copy">© 2020–{{ site.time | date: "%Y" }} {{ site.author }}. {{ t.footer.rights }}</p>
+  </div>
+</footer>

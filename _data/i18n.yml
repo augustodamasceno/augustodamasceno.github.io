@@ -1,0 +1,133 @@
+# UI strings. Keep `en` and `pt` keys in sync.
+en:
+  html_lang: en
+  locale: en_US
+  lang_name: English
+  lang_short: EN
+  switch_to: Read in English
+  site_description: "Computer Engineer working with AI, embedded systems and quantitative trading."
+  skip: Skip to content
+  menu: Menu
+  nav_label: Main navigation
+  nav:
+    home: Home
+    about: About
+    projects: Projects
+    apps: Apps
+    contact: Contact
+  footer:
+    tagline: "Computer Engineer · AI · Embedded Systems · Quantitative Trading"
+    rights: All rights reserved.
+  sg:
+    title: Design system
+    intro: "Building blocks of the new site: colors, type, buttons, cards, forms and more. Every page is composed from these pieces."
+    colors: Colors
+    typography: Typography
+    buttons: Buttons
+    tags: Tags
+    cards: Cards
+    forms: Forms
+    tables: Tables
+    callouts: Callouts
+    code: Code
+    lead: "Computer Engineer building intelligent systems, from microcontrollers to trading algorithms."
+    body: "Body text uses Inter for long-form reading. Links look like this, and inline code like this."
+    link: like this
+    muted: "Muted text for captions and secondary information."
+    btn_primary: Primary action
+    btn_secondary: Secondary
+    btn_ghost: Ghost
+    btn_disabled: Disabled
+    project_title: Knowledge Journal
+    project_desc: "Structured notes on mathematics, engineering, AI, programming and economics."
+    project2_title: Black-Scholes Calculator
+    project2_desc: "Option pricing with Greeks, implied volatility and sensitivity charts."
+    view: View project
+    app1: Bitwise
+    app1_desc: "Bit operations with an ATmega328P register reference."
+    app2: Interest
+    app2_desc: "Simple and compound interest with periodic contributions."
+    app3: Backtesting time
+    app3_desc: "Estimate execution time from data granularity."
+    form_amount: Initial amount
+    form_rate: Annual rate (%)
+    form_period: Period
+    form_months: Months
+    form_years: Years
+    form_help: "Values are calculated locally in your browser."
+    form_check: Compound monthly
+    form_result: Final amount
+    table_caption: "Sample results"
+    table_year: Year
+    table_balance: Balance
+    table_interest: Interest
+    callout_info: "Information callout, for neutral notes."
+    callout_note: "Note callout, for tips and highlights."
+    callout_success: "Success callout, for results and confirmations."
+    callout_warning: "Warning callout, for limitations and caveats."
+pt:
+  html_lang: pt-BR
+  locale: pt_BR
+  lang_name: Português
+  lang_short: PT
+  switch_to: Ler em português
+  site_description: "Engenheiro de Computação trabalhando com IA, sistemas embarcados e trading quantitativo."
+  skip: Pular para o conteúdo
+  menu: Menu
+  nav_label: Navegação principal
+  nav:
+    home: Início
+    about: Sobre
+    projects: Projetos
+    apps: Apps
+    contact: Contato
+  footer:
+    tagline: "Engenheiro de Computação · IA · Sistemas Embarcados · Trading Quantitativo"
+    rights: Todos os direitos reservados.
+  sg:
+    title: Design system
+    intro: "Os blocos do novo site: cores, tipografia, botões, cards, formulários e mais. Todas as páginas são montadas a partir dessas peças."
+    colors: Cores
+    typography: Tipografia
+    buttons: Botões
+    tags: Tags
+    cards: Cards
+    forms: Formulários
+    tables: Tabelas
+    callouts: Avisos
+    code: Código
+    lead: "Engenheiro de Computação construindo sistemas inteligentes, de microcontroladores a algoritmos de trading."
+    body: "O texto corrido usa Inter para leitura longa. Links ficam assim, e código inline assim."
+    link: assim
+    muted: "Texto secundário para legendas e informações complementares."
+    btn_primary: Ação principal
+    btn_secondary: Secundário
+    btn_ghost: Discreto
+    btn_disabled: Desabilitado
+    project_title: Knowledge Journal
+    project_desc: "Notas estruturadas de matemática, engenharia, IA, programação e economia."
+    project2_title: Calculadora Black-Scholes
+    project2_desc: "Precificação de opções com gregas, volatilidade implícita e gráficos de sensibilidade."
+    view: Ver projeto
+    app1: Bitwise
+    app1_desc: "Operações de bits com referência de registradores do ATmega328P."
+    app2: Juros
+    app2_desc: "Juros simples e compostos com aportes periódicos."
+    app3: Tempo de backtesting
+    app3_desc: "Estime o tempo de execução a partir da granularidade dos dados."
+    form_amount: Valor inicial
+    form_rate: Taxa anual (%)
+    form_period: Período
+    form_months: Meses
+    form_years: Anos
+    form_help: "Os valores são calculados localmente no seu navegador."
+    form_check: Capitalização mensal
+    form_result: Valor final
+    table_caption: "Resultados de exemplo"
+    table_year: Ano
+    table_balance: Saldo
+    table_interest: Juros
+    callout_info: "Aviso informativo, para notas neutras."
+    callout_note: "Aviso de destaque, para dicas."
+    callout_success: "Aviso de sucesso, para resultados e confirmações."
+    callout_warning: "Aviso de atenção, para limitações e ressalvas."

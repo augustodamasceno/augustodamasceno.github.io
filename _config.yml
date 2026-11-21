@@ -1,0 +1,37 @@
+title: Augusto Damasceno
+author: Augusto Damasceno
+email: augustodamasceno@protonmail.com
+github_user: augustodamasceno
+url: https://augustodamasceno.org
+baseurl: ""
+
+# Google Analytics (only rendered when JEKYLL_ENV=production, as on GitHub Pages)
+google_analytics: G-WVZD0WRQVY
+
+languages: [en, pt]
+default_lang: en
+
+permalink: pretty
+markdown: kramdown
+
+exclude:
+  - archive
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .idea
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: "pt"
+    values:
+      lang: pt

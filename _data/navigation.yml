@@ -1,0 +1,9 @@
+# Main navigation. `path` is appended to the language home ("/" or "/pt/").
+- key: about
+  path: "#about"
+- key: projects
+  path: "#projects"
+- key: apps
+  path: "apps/"
+- key: contact
+  path: "#contact"

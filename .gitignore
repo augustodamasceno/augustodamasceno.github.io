@@ -1,0 +1,14 @@
+*.DS_Store
+.idea
+
+# Old site, kept locally only
+/archive/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Preview board (screenshots)
+.preview/

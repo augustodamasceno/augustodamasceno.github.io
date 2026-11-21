@@ -1,0 +1,36 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- if page.lang == site.default_lang -%}{%- assign home = "/" -%}{%- else -%}{%- assign home = "/" | append: page.lang | append: "/" -%}{%- endif -%}
+{%- if page.lang == "pt" -%}{%- assign other_lang = "en" -%}{%- else -%}{%- assign other_lang = "pt" -%}{%- endif -%}
+{%- assign other_url = nil -%}
+{%- if page.ref -%}
+  {%- assign other_page = site.pages | where: "ref", page.ref | where: "lang", other_lang | first -%}
+  {%- if other_page -%}{%- assign other_url = other_page.url -%}{%- endif -%}
+{%- endif -%}
+{%- unless other_url -%}
+  {%- if other_lang == site.default_lang -%}{%- assign other_url = "/" -%}{%- else -%}{%- assign other_url = "/" | append: other_lang | append: "/" -%}{%- endif -%}
+{%- endunless -%}
+{%- assign ot = site.data.i18n[other_lang] -%}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="{{ home | relative_url }}" aria-label="{{ site.title }} — {{ t.nav.home }}">
+      {% include wordmark.html %}
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{ t.menu }}">
+      {% include icon.html name="menu" class="nav-toggle__open" px=22 %}
+      {% include icon.html name="close" class="nav-toggle__close" px=22 %}
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="{{ t.nav_label }}">
+      <ul class="site-nav__list">
+        {%- for item in site.data.navigation %}
+        {%- assign href = home | append: item.path %}
+        <li><a class="site-nav__link" href="{{ href | relative_url }}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t.nav[item.key] }}</a></li>
+        {%- endfor %}
+      </ul>
+      <a class="lang-switch" href="{{ other_url | relative_url }}" hreflang="{{ ot.html_lang }}" lang="{{ ot.html_lang }}" title="{{ ot.switch_to }}" aria-label="{{ ot.switch_to }}">
+        {% include icon.html name="globe" px=16 %}<span>{{ ot.lang_short }}</span>
+      </a>
+    </nav>
+  </div>
+</header>
